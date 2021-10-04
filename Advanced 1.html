@@ -1,0 +1,480 @@
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Advanced CSS Properties</title>
+    <link href="https://fonts.googleapis.com/css?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bahianita&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sofia&display=swap&effect=fire|neon|outline|emboss|shadow-multiple" rel="stylesheet">
+    <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+
+
+    #s {
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+    }
+
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-decoration: underline;
+      text-align: center;
+      color: maroon;
+    }
+
+    body {
+      margin: 0 70px;
+      padding: 20px;
+      font-size: 120%;
+      background-image: url(https://images.pexels.com/photos/4226873/pexels-photo-4226873.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4226873.jpg&fm=jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
+      background-attachment: fixed;
+      text-align: justify;
+      line-height: 1.8;
+      word-spacing: 3px;
+      font-family: times, georgia, garamond serif;
+      counter-reset: section;
+    }
+
+    h1 {
+      /*These are counters. Check the lessons on CSS counters*/
+      counter-reset: subsection;
+    }
+
+    h1::before {
+      counter-increment: section;
+      content: "Section "counter(section) ". ";
+    }
+
+    h2::before {
+      counter-increment: subsection;
+      content: counter(section) "."counter(subsection) " ";
+    }
+
+    h3::before {
+      counter-increment: subsection;
+      content: counter(section) "."counter(subsection) ". ";
+    }
+
+    #nosection::before {
+      counter-increment: none;
+      content: none;
+    }
+
+
+
+
+
+
+    strong {
+      color: darkred;
+    }
+
+
+    #fixed-img {
+      /*For my FIXED picture at the bottom right */
+      width: 15%;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+
+    #sticky {
+      /* FOR THE STICKY BAR AT THE BOTTOM (CSS lessons by: laurel)*/
+      position: sticky;
+      bottom: 0;
+      text-align: center;
+      opacity: 0.4;
+      font-family: monoton;
+      font-size: 30px;
+      clear: both;
+    }
+
+    #sticky a {
+      text-decoration: none;
+      color: black;
+    }
+
+    #sticky:hover {
+      opacity: 1;
+      text-shadow: 3px 3px 3px rebeccapurple;
+      font-size: 33px;
+    }
+
+
+
+
+
+
+    .mbar {
+      /*For the navigation bar as a whole*/
+      position: sticky;
+      z-index: 1;
+      opacity: 0.4;
+      top: 0;
+    }
+
+    .mbar:hover {
+      opacity: 1;
+    }
+
+    .bar {
+      /* for main links of the navigation bar (home/html/css etc)*/
+      list-style-type: none;
+      background-color: black;
+      overflow: auto;
+      padding: 0;
+      margin: 0;
+      border: 1px solid black;
+      border-radius: 100px;
+    }
+
+    .bar li {
+      float: left;
+    }
+
+    .bar a {
+      color: antiquewhite;
+      text-decoration: none;
+      display: inline-block;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .bar a:hover {
+      background-color: #191919;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      /*For the CSS dropdown */
+      display: inline-block;
+    }
+
+    .droplinks {
+      display: none;
+      background-color: gainsboro;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+    }
+
+    .droplinks:hover {
+      opacity: 0.8;
+    }
+
+    #p4 {
+      border: none;
+    }
+
+    #p4:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .droplinks a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 1px solid silver;
+    }
+
+    .droplinks a:hover {
+      background-color: darkgrey;
+    }
+
+    .dropdown:hover .droplinks {
+      display: block;
+    }
+
+    #h {
+      background-color: darkslategrey;
+    }
+
+
+
+    .ang {
+      /* for the angela dropdown*/
+      display: inline-block;
+    }
+
+    .anglink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    .anglink:hover {
+      opacity: 0.8;
+    }
+
+    #a3 {
+      border: none;
+    }
+
+    #a3:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .anglink a {
+      display: block;
+      padding: 10px 20px;
+      color: black;
+      border-bottom: 1px solid silver;
+    }
+
+    .anglink a:hover {
+      background-color: darkgrey;
+    }
+
+    .ang:hover .anglink {
+      display: block;
+    }
+
+
+
+    .adv {
+      display: inline-block;
+    }
+    .advlink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      opacity: 0.4;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .advlink:hover {
+      opacity: 0.8;
+    }
+    .advlink a {
+      display: block;
+      color: black;
+    }
+    .advlink a:hover {
+      background-color: darkgrey;
+    }
+
+    #adv3 {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .adv:hover .advlink {
+      display: block;
+    }
+
+
+
+
+
+    .bgrd {
+      background-image: url(https://images.pexels.com/photos/1767434/pexels-photo-1767434.jpeg?cs=srgb&dl=pexels-j-u-n-e-1767434.jpg&fm=jpg);
+      background-position: center;
+      background-size: contain;
+    }
+
+
+
+    @media screen and (max-width: 1000px) {
+
+    }
+    .heroimage {
+      background-image: url(https://images.pexels.com/photos/5235853/pexels-photo-5235853.jpeg?cs=srgb&dl=pexels-olya-kobruseva-5235853.jpg&fm=jpg);
+      background-size: cover;
+      height: 600px;
+      width: 600px;
+      position: relative;
+    }
+    .herotext h1,h3 {
+      text-decoration: none;
+      color: white;
+      text-shadow: 3px 3px 3px black;
+    }
+    .herotext button {
+      outline: 2px groove black;
+      border: 2px ridge brown;
+      width: 18%;
+      cursor: pointer;
+      padding: 8px;
+      background-color: black;
+      font-family: cursive;
+      color: antiquewhite;
+      font-size: 18px;
+    }
+    .herotext button:hover {
+      font-size: 20px;
+    }
+    .herotext {
+      position: absolute;
+      text-align: center;
+      right: 10px;
+      top: 150px;
+      font-size: 30px;
+    }
+    </style>
+  </head>
+  <body>
+    <hr size="3" noshade>
+
+    <div class="mbar">
+      <ul class="bar">
+        <li><a id="h" href="#">Home</a></li>
+        <li><a href="html.html" target="_blank">HTML</a></li>
+        <li class="dropdown">
+          <a href="#">CSS</a>
+          <div class="droplinks">
+            <a href="index.html">Part 1</a>
+            <a href="CSS Part2.html">Part 2</a>
+            <a href="CSS Part3.html">Part 3</a>
+            <a id="p4" href="CSS part4.html">Part 4</a>
+          </div>
+        </li>
+        <li class="ang">
+          <a href="#">Angela</a>
+          <div class="anglink">
+            <a href="angela.html" target="_blank">Homepage</a>
+            <a href="Contact me.html" target="_blank">Contact</a>
+            <a id="a3" href="About me.html" target="_blank">About</a>
+          </div>
+        </li>
+        <li style="float: right;"class="adv">
+          <a href="#">Advanced</a>
+          <div class="advlink">
+            <a href="Advanced 1.html">Part 1</a>
+            <a id="adv3"href="Advanced 2.html">Part 2</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr size="3" noshade>
+
+    <h1>CSS Rounded Corners</h1>
+
+    <p id="s">This property allows you to add rounded corners to elements!</p>
+
+    <h2>Basic Reminder</h2>
+
+    <div class=""id="s">
+      <ol>
+        <li>Rounded corners for an element with a specified background color:</li>
+        <div style="height: 120px;background-color: darkolivegreen;width: 180px;padding: 10px;border-radius: 20px;color: antiquewhite;">
+          Rounded Corners!
+        </div>
+        <li>Rounded corners for an element with a border:</li>
+        <div style="height: 120px;width: 180px;padding: 10px;border-radius: 20px;color: black;border: 3px groove darkred;">
+          Rounded Corners!
+        </div>
+        <li>Rounded corners for an element with a background image:</li>
+        <div class="bgrd"style="height: 120px;width: 180px;padding: 10px;border-radius: 20px;color: antiquewhite;">
+          Rounded Corners!
+        </div>
+      </ol>
+    </div>
+
+    <h2>Specify each corner</h2>
+
+    <p id="s">The border-radius property can have from one to four values. Here are the rules:</p>
+
+    <div id="s">
+      <ol>
+        <li><strong>Four values:</strong> First value applies to top-left corner,
+          second value applies to top-right corner,
+          third value applies to bottom-right corner,
+          and fourth value applies to bottom-left corner</li>
+        <div style="width: 180px;background-color: rosybrown;height: 120px;padding: 10px;border-radius: 20px 50px 30px 10px;">
+          4 Corners
+        </div><br>
+
+        <li><strong>Three values:</strong> First value applies to top-left corner,
+          second value applies to top-right and bottom-left corners,
+          and third value applies to bottom-right corner</li>
+          <div style="width: 180px;background-color: rosybrown;height: 120px;padding: 10px;border-radius: 20px 50px 10px;">
+            3 Corners
+          </div><br>
+
+        <li><strong>Two values:</strong> First value applies to top-left and
+          bottom-right corners, and the second value applies to top-right
+          and bottom-left corners</li>
+          <div style="width: 180px;background-color: rosybrown;height: 120px;padding: 10px;border-radius: 20px 50px;">
+            2 Corners
+          </div><br>
+      </ol>
+    </div>
+
+    <h2>Elliptical Borders</h2>
+
+    <div id="s">
+      <ol>
+        <li><strong>Elliptical border <em>(for the top and bottom)</em></strong> Border-radius: 50px/15px:</li>
+        <div style="background-color: darkslategrey;width: 180px; height: 150px;border-radius: 50px/15px;">
+        </div><br>
+
+        <li><strong>Elliptical border <em>(for the sides)</em></strong> Border-radius: 15px/50px:</li>
+        <div style="background-color: darkslategrey;width: 180px; height: 150px;border-radius: 15px/50px;">
+        </div>
+      </ol>
+    </div>
+
+    <hr size="3" noshade>
+
+    <h1>Background image (extras)</h1>
+
+    <h2>Hero Image (with relative and absolute position)</h2>
+
+    <p id="s">We can create a hero image <strong>(a large image with text)</strong>,
+      and place it where you want.</p>
+
+    <div class="heroimage">
+      <div class="herotext">
+        <h1 id="nosection">Vespa and Ravioli...</h1>
+        <h3 id="nosection">Por favor, Va bene</h3>
+        <button type="button" name="button">Hey🤪</button>
+      </div>
+    </div>
+
+    <hr size="3" noshade>
+
+    <h1>CSS Gradients</h1>
+
+
+
+    <br><br><br><br><br><br>
+    <img id="fixed-img" src="https://live.staticflickr.com/65535/51379942339_cc5b2170d5_o.png" alt="laurel">
+    <div id="sticky">
+      <a href="https://www.instagram.com/laurel_nk/" target="_blank" title="Instagram">CSS Lessons By: Laurel</a>
+    </div>
+  </body>
+</html>
