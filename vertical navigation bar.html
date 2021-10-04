@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+    }
+      #s {
+        background-color: lightgray;
+        opacity: 0.8;
+        border-radius: 8px;
+        border-left: groove 4px saddlebrown;
+        padding: 10px;
+        width: 70%;
+      }
+
+
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-decoration: underline;
+        text-align: center;
+        color: maroon;
+      }
+
+      body {
+        font-size: 120%;
+        margin: 0; /*Note: We removed the margin of the whole page*/
+        background-image: url(https://images.pexels.com/photos/4226873/pexels-photo-4226873.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4226873.jpg&fm=jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+        background-attachment: fixed;
+        text-align: justify;
+        line-height: 1.8;
+        word-spacing: 3px;
+        font-family: times, georgia, garamond serif;
+      }
+
+      strong {
+        color: darkred;
+      }
+
+
+
+
+      ul {
+        width: 25%;
+        overflow: auto;
+        background-color: dimgrey;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: fixed;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 5px 15px;
+      }
+      a:hover {
+        background-color: lightslategray;
+      }
+      a:active {
+        background-color: silver;
+      }
+
+      .home {
+        background-color: darkred;
+        color: antiquewhite;
+      }
+      .home:hover {
+        background-color: firebrick;
+      }
+      .home:active {
+        background-color: crimson;
+      }
+
+
+      div {
+        margin-left: 25%;
+        background-color: silver;
+        padding: 5px 10px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+      <ul>
+        <li><a class="home" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div>
+        <h2>Fixed Full-height Side Nav</h2>
+        <p style="text-align: center;font-weight: bold;text-decoration: underline;font-size: 24px;">Try to scroll this area, and see how the sidenav sticks to the page</p>
+        <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+      </div>
+  </body>
+</html>

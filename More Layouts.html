@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bahianita&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sofia&display=swap&effect=fire|neon|outline|emboss|shadow-multiple" rel="stylesheet">
+    <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+      #s {
+        background-color: lightgray;
+        opacity: 0.8;
+        border-radius: 8px;
+        border-left: groove 4px saddlebrown;
+        padding: 10px;
+        width: 70%;
+      }
+
+
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-decoration: underline;
+        text-align: center;
+        color: maroon;
+      }
+
+      body {
+        margin: 0 70px;
+        padding: 20px;
+        font-size: 120%;
+        background-image: url(https://images.pexels.com/photos/4226873/pexels-photo-4226873.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4226873.jpg&fm=jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+        background-attachment: fixed;
+        text-align: justify;
+        line-height: 1.8;
+        word-spacing: 3px;
+        font-family: times, georgia, garamond serif;
+        counter-reset: section;
+      }
+
+
+      .head {
+        background-color: darkred;
+      }
+      .head h1 {
+        color: antiquewhite;
+        text-align: center;
+        padding: 30px 10px;
+        font-size: 35px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .nav {
+        background-color: darkred;
+      }
+      .nav h1 {
+        color: antiquewhite;
+        text-align: center;
+        padding: 10px 10px;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .body div {
+        background-color: white;
+        float: left;
+      }
+      .body::after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+      .body p {
+        background-color: darkred;
+        margin: 0;
+        padding: 150px 0px;
+        text-align: center;
+        color: antiquewhite;
+      }
+
+      .left {
+        width: 20%;
+      }
+      .left p {
+        margin-right: 10px;
+      }
+
+      .middle {
+        width: 60%;
+      }
+
+      .right {
+        width: 20%;
+      }
+      .right p {
+        margin-left: 10px;
+      }
+
+      .foot {
+        background-color: darkred;
+      }
+      .foot h1 {
+        color: antiquewhite;
+        padding: 30px 10px;
+      }
+
+
+
+      @media screen and (max-width:1000px) {
+        .body1 .column1 {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width:700px) {
+        .nav1 a {
+          width: 100%;
+        }
+      }
+      .head1 {
+        background-color: rosybrown;
+        padding: 15px 0px;
+      }
+      .head1 h1 {
+        color: black;
+        text-decoration: none;
+      }
+      .head1 p {
+        text-align: center;
+        background: black;
+        color: rosybrown;
+      }
+
+      .nav1 {
+        background-color: black;
+        overflow: auto;
+      }
+      .nav1 a {
+        text-decoration: none;
+        color: sienna;
+        padding: 15px 20px;
+        float: left;
+      }
+      .nav1 a:hover {
+        background-color: rosybrown;
+        color: black;
+        font-weight: bold;
+      }
+
+
+      .column1 {
+        width: 33.33%;
+        float: left;
+        background-color: rosybrown;
+        display: block;
+        padding: 0px 20px;
+      }
+      .column1 h2 {
+        text-align: left;
+        text-decoration-style: double;
+        color: black;
+      }
+      .body1::after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+
+      .foot1 {
+        background-color: black;
+      }
+      .foot1 h2 {
+        text-decoration: none;
+        color: rosybrown;
+        margin-top: 0px;
+        padding: 20px 0px;
+      }
+
+
+
+
+
+
+      .full {
+        border: 3px ridge tan;
+        box-shadow: 2px 3px 10px 2px #402060;
+      }
+      .head2 {
+        background-color: #402060;
+        padding: 10px 0px;
+      }
+      .head2 h1 {
+        color: tan;
+        text-decoration: none;
+      }
+      .head2 p {
+        background-color: tan;
+        text-align: center;
+        color: #402060;
+      }
+
+      .nav2 {
+        background-color: tan;
+        overflow: auto;
+      }
+      .nav2 a {
+        color: #402060;
+        text-decoration: none;
+        float: left;
+        padding: 10px 20px;
+      }
+      .nav2 a:hover {
+        background-color: #402060;
+        color: tan;
+      }
+
+
+      .body2 {
+        background-color: #402060;
+      }
+      .leftcolumn {
+        width: 70%;
+        float: left;
+        background-color: #402060;
+        padding: 0px 20px;
+      }
+      .leftcolumn .card2 {
+        background-color: #402060;
+        border: 3px ridge tan;
+        margin: 20px 0px;
+        padding: 0px 20px;
+      }
+      .leftcolumn .card2 .image {
+        background-color: tan;
+        height: 200px;
+        text-align: center;
+        padding: 20px 0px;
+      }
+      .leftcolumn h2, .leftcolumn h3, .leftcolumn p {
+        color: tan;
+        text-decoration: none;
+      }
+
+      .rightcolumn {
+        width: 30%;
+        float: left;
+        padding: 0px 10px;
+        background-color: tan;
+      }
+      .rightcolumn .card2 {
+        border: 3px ridge #402060;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+      }
+      .rightcolumn .card2 .image {
+        background-color: #402060;
+        height: 100px;
+        color: tan;
+        text-align: center;
+        padding: 10px 0px;
+      }
+
+      .rightcolumn .card2 h2, .rightcolumn .card2 h3, .rightcolumn .card2 p {
+        color: #402060;
+        text-decoration: none;
+      }
+      .body2 {
+        clear: both;
+        content: "";
+        display: table;
+      }
+
+      .foot2 {
+        background-color: tan;
+      }
+      .foot2 h1 {
+        margin: 0px 0px;
+        text-decoration: none;
+        color: #402060;
+        padding: 15px 0px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <hr size="3" noshade>
+
+    <div class="sample">
+      <div class="head">
+        <h1>Header</h1>
+      </div>
+
+      <div class="nav">
+        <h1>Navigation Menu</h1>
+      </div>
+
+      <div class="body">
+        <div class="left">
+          <p>Left content</p>
+        </div>
+        <div class="middle">
+          <p>Middle content</p>
+        </div>
+        <div class="right">
+          <p>Right content</p>
+        </div>
+      </div>
+
+      <div class="foot">
+        <h1>Footer</h1>
+      </div>
+    </div>
+
+    <hr size="3" noshade>
+
+    <div class="equal">
+      <div class="head1">
+        <h1>Header</h1>
+        <p>Resize the browser window to see the responsiveness effect.</p>
+      </div>
+      <div class="nav1">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+      <div class="body1">
+        <div class="column1">
+          <h2>Column</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+          Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+          Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros,
+          eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+        <div class="column1">
+          <h2>Column</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+          Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+          Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros,
+          eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+        <div class="column1">
+          <h2>Column</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+          Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+          Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros,
+          eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+      </div>
+      <div class="foot1">
+        <h2>Footer</h2>
+      </div>
+    </div>
+
+    <hr size="3" noshade>
+
+    <div class="full">
+      <div class="head2">
+        <h1>Website</h1>
+        <p>Resize the browser window to see the effect.
+
+        </p>
+      </div>
+      <div class="nav2">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#" style="float: right;">Link 4</a>
+      </div>
+      <div class="body2">
+        <div class="leftcolumn">
+          <div class="card2">
+            <h2>Title description</h2>
+            <h3>Date: 3rd September 2021</h3>
+            <div class="image">
+              Image
+            </div>
+            <p>Some text..
+              Sunt in culpa qui officia deserunt mollit anim id est laborum
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco.</p>
+          </div>
+          <div class="card2">
+            <h2>Title description</h2>
+            <h3>Date: 3rd September 2021</h3>
+            <div class="image">
+              Image
+            </div>
+            <p>Some text..
+              Sunt in culpa qui officia deserunt mollit anim id est laborum
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco.</p>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card2">
+            <h2>About me</h2>
+            <div class="image">
+              Image
+            </div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+          </div>
+          <div class="card2">
+            <h2>Popular post</h2>
+            <div class="image">Image</div>
+            <div class="image">Image</div>
+            <div class="image">Image</div>
+          </div>
+          <div class="card2">
+            <h2>Follow me</h2>
+            <p>Some text...</p>
+          </div>
+        </div>
+      </div>
+      <div class="foot2">
+        <h1>Footer</h1>
+      </div>
+    </div>
+
+  </body>
+</html>
