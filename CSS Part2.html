@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>🤪CSS (Part 2)</title>
+  <link href="https://fonts.googleapis.com/css?family=Palette+Mosaic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bahianita&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sofia&display=swap&effect=fire|neon|outline|emboss|shadow-multiple" rel="stylesheet">
+  <style media="screen">
+    #s {
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+    }
+
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-decoration: underline;
+      text-align: center;
+      color: maroon;
+    }
+
+    body {
+      margin: 0 70px;
+      padding: 20px;
+      font-size: 120%;
+      background-image: url(https://images.pexels.com/photos/4226873/pexels-photo-4226873.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4226873.jpg&fm=jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
+      background-attachment: fixed;
+      text-align: justify;
+      line-height: 1.8;
+      word-spacing: 3px;
+      font-family: times, georgia, garamond serif;
+    }
+
+    strong {
+      color: darkred;
+    }
+
+
+
+
+
+    #t {
+      margin-left: 80px;
+      width: 90%;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    #t td {
+      border-bottom: 1px inset darkred;
+      padding: 20px;
+    }
+
+    #t th {
+      background-color: maroon;
+      color: antiquewhite;
+      padding: 20px;
+    }
+
+    #t th:hover {
+      background-color: firebrick;
+    }
+
+    #e {
+      background-color: lightsteelblue;
+    }
+
+    #e td:hover {
+      background-color: lightslategray;
+    }
+
+    #o {
+      background-color: lightgray;
+    }
+
+    #o td:hover {
+      background-color: silver;
+    }
+
+
+
+    #display li {
+      display: inline-block;
+    }
+
+    #display a {
+      border: 3px inset darkred;
+      padding: 5px 20px;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+    }
+
+    #display a:hover {
+      border: 3px inset darkred;
+      background-color: darkred;
+      padding: 5px 20px;
+      text-decoration: none;
+      color: antiquewhite;
+      text-align: center;
+      text-shadow: 3px 3px 3px white;
+    }
+
+
+
+
+    #fixed-img {
+      width: 15%;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+
+    #sticky {
+      text-align: center;
+      font-family: monoton;
+      font-size: 30px;
+      opacity: 0.4;
+      position: sticky;
+      bottom: 0;
+    }
+
+    #sticky a {
+      text-decoration: none;
+      color: black;
+    }
+
+    #sticky:hover {
+      text-shadow: 3px 3px 3px rebeccapurple;
+      opacity: 1;
+    }
+
+
+
+
+    #relative {
+      position: relative;
+    }
+
+    #relative img {
+      opacity: 0.5;
+      border: 3px inset rosybrown;
+    }
+
+    #relative div.topleft {
+      position: absolute;
+      padding: 4px 8px;
+      background-color: #f1e9f1;
+      top: 30px;
+      left: 30px;
+      border: 3px outset rosybrown;
+      border-radius: 8px;
+      opacity: 0.6;
+      text-decoration: none;
+    }
+
+    #relative div.topright {
+      position: absolute;
+      padding: 4px 8px;
+      background-color: #f1e9f1;
+      top: 30px;
+      right: 230px;
+      border: 3px outset rosybrown;
+      border-radius: 8px;
+      opacity: 0.6;
+    }
+
+    #relative div.center {
+      position: absolute;
+      padding: 4px 8px;
+      background-color: #f1e9f1;
+      top: 180px;
+      left: 270px;
+      border: 3px outset rosybrown;
+      border-radius: 8px;
+      opacity: 0.6;
+    }
+
+    #relative div.bottomleft {
+      position: absolute;
+      padding: 4px 8px;
+      background-color: #f1e9f1;
+      bottom: 40px;
+      left: 30px;
+      border: 3px outset rosybrown;
+      border-radius: 8px;
+      opacity: 0.6;
+    }
+
+    #relative div.bottomright {
+      position: absolute;
+      padding: 4px 8px;
+      background-color: #f1e9f1;
+      bottom: 40px;
+      right: 230px;
+      border: 3px outset rosybrown;
+      border-radius: 8px;
+      opacity: 0.6;
+    }
+
+
+
+
+    #nav {
+      overflow: auto;
+      background-color: #191919;
+      list-style-type: none;
+      padding: 0px;
+    }
+
+    #nav li {
+      float: left;
+    }
+
+    #nav a {
+      padding: 15px 15px;
+      text-decoration: none;
+      color: antiquewhite;
+      display: inline-block;
+    }
+
+    #nav a:hover {
+      background-color: #404040;
+    }
+
+
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .web {
+      border: 5px outset darkgrey;
+      border-radius: 8px;
+      opacity: 0.8;
+    }
+
+    .head,
+    .foot {
+      background-color: darkslategrey;
+      overflow: auto;
+      clear: both;
+    }
+
+    .body {
+      background-color: silver;
+    }
+
+    .menu {
+      float: left;
+      width: 25%;
+      overflow: auto;
+    }
+
+    .menu li {
+      list-style-type: none;
+      background-color: darkred;
+      width: 110px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .menu li:hover {
+      background-color: firebrick;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: antiquewhite;
+    }
+
+    .text {
+      overflow: auto;
+      background-color: darkgrey;
+      width: 75%;
+      padding: 10px;
+    }
+
+
+
+
+
+    .part3 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .part3 a {
+      background-color: #191919;
+      color: antiquewhite;
+      text-decoration: none;
+      padding: 20px;
+      font-size: 25px;
+      font-family: monoton;
+      opacity: 0.8;
+      border: 3px outset darkred;
+    }
+
+    .part3 a:hover {
+      opacity: 1;
+      background-color: black;
+      text-shadow: 5px 5px 5px darkred;
+      font-size: 28px;
+    }
+
+
+
+
+
+
+
+    .mbar {
+      /*For the navigation bar as a whole*/
+      position: sticky;
+      z-index: 1;
+      opacity: 0.4;
+      top: 0;
+    }
+
+    .mbar:hover {
+      opacity: 1;
+    }
+
+    .bar {
+      /* for main links of the navigation bar (home/html/css etc)*/
+      list-style-type: none;
+      background-color: black;
+      overflow: auto;
+      padding: 0;
+      margin: 0;
+      border: 1px solid black;
+      border-radius: 100px;
+    }
+
+    .bar li {
+      float: left;
+    }
+
+    .bar a {
+      color: antiquewhite;
+      text-decoration: none;
+      display: inline-block;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .bar a:hover {
+      background-color: #191919;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      /*For the CSS dropdown */
+      display: inline-block;
+    }
+
+    .droplinks {
+      display: none;
+      background-color: gainsboro;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+    }
+
+    .droplinks:hover {
+      opacity: 0.8;
+    }
+
+    #p4 {
+      border: none;
+    }
+
+    #p4:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .droplinks a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 1px solid silver;
+    }
+
+    .droplinks a:hover {
+      background-color: darkgrey;
+    }
+
+    .dropdown:hover .droplinks {
+      display: block;
+    }
+
+    #h {
+      background-color: darkslategrey;
+    }
+
+
+
+    .ang {
+      /* for the angela dropdown*/
+      display: inline-block;
+    }
+
+    .anglink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    .anglink:hover {
+      opacity: 0.8;
+    }
+
+    #a3 {
+      border: none;
+    }
+
+    #a3:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .anglink a {
+      display: block;
+      padding: 10px 20px;
+      color: black;
+      border-bottom: 1px solid silver;
+    }
+
+    .anglink a:hover {
+      background-color: darkgrey;
+    }
+
+    .ang:hover .anglink {
+      display: block;
+    }
+
+
+
+    .adv {
+      display: inline-block;
+    }
+    .advlink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      opacity: 0.4;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .advlink:hover {
+      opacity: 0.8;
+    }
+    .advlink a {
+      display: block;
+      color: black;
+    }
+    .advlink a:hover {
+      background-color: darkgrey;
+    }
+
+    #adv3 {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .adv:hover .advlink {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <hr size="3" noshade>
+
+  <div class="mbar">
+    <ul class="bar">
+      <li><a id="h" href="#">Home</a></li>
+      <li><a href="html.html" target="_blank">HTML</a></li>
+      <li class="dropdown">
+        <a href="#">CSS</a>
+        <div class="droplinks">
+          <a href="index.html">Part 1</a>
+          <a href="CSS Part2.html">Part 2</a>
+          <a href="CSS Part3.html">Part 3</a>
+          <a id="p4" href="CSS part4.html">Part 4</a>
+        </div>
+      </li>
+      <li class="ang">
+        <a href="#">Angela</a>
+        <div class="anglink">
+          <a href="angela.html" target="_blank">Homepage</a>
+          <a href="Contact me.html" target="_blank">Contact</a>
+          <a id="a3" href="About me.html" target="_blank">About</a>
+        </div>
+      </li>
+      <li style="float: right;"class="adv">
+        <a href="#">Advanced</a>
+        <div class="advlink">
+          <a href="Advanced 1.html">Part 1</a>
+          <a id="adv3"href="Advanced 2.html">Part 2</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <h2>CSS Table</h2>
+  <div id="s" style="line-height: 1.4;">
+    <p>Some reminders:</p>
+    <ul>
+      <li>Table head in <strong>thead</strong>, table row, table data in <strong>tbody</strong></li>
+      <li>You can add or remove borders on each table cell or the entire table.
+        You can use <strong>border top/left/bottom/right</strong></li>
+      <li>Use <strong>border-collapse</strong> to remove <strong>double borders.</strong></li>
+      <li>Use <strong>width</strong> and <strong>height</strong>
+        to set the width and height of the table.</li>
+      <li>Use <strong>text-align</strong> to put text in the <strong>left, middle or right</strong></li>
+      <li>Use <strong>vertical align</strong> to put text in <strong>top, center, or bottom</strong></li>
+      <li>You can also use <strong>hover</strong> on tables to highlight them</li>
+    </ul>
+  </div>
+  <br>
+  <table id="t">
+    <thead>
+      <tr>
+        <th>Continent</th>
+        <th>Country</th>
+        <th>Capital</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="e">
+        <td>S.America</td>
+        <td>Argentina</td>
+        <td>Buenos Aires</td>
+      </tr>
+      <tr id="o">
+        <td>S.America</td>
+        <td>Brazil</td>
+        <td>Brasilia</td>
+      </tr>
+      <tr id="e">
+        <td>S.America</td>
+        <td>Venezuela</td>
+        <td>Caracas</td>
+      </tr>
+      <tr id="o">
+        <td>N.America</td>
+        <td>Canada</td>
+        <td>Ottawa</td>
+      </tr>
+      <tr id="e">
+        <td>N.America</td>
+        <td>USA</td>
+        <td>Washington DC</td>
+      </tr>
+      <tr id="o">
+        <td>Africa</td>
+        <td>Cameroon</td>
+        <td>Yaounde</td>
+      </tr>
+      <tr id="e">
+        <td>Africa</td>
+        <td>Nigeria</td>
+        <td>Abuja</td>
+      </tr>
+      <tr id="o">
+        <td>Africa</td>
+        <td>Rwanda</td>
+        <td>Kigali</td>
+      </tr>
+      <tr id="e">
+        <td>Africa</td>
+        <td>South Africa</td>
+        <td>Pretoria</td>
+      </tr>
+      <tr id="o">
+        <td>Africa</td>
+        <td>Egypt</td>
+        <td>Cairo</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr size="3" noshade>
+
+  <h1>CSS Display</h1>
+
+  <p id="s">The display property specifies if/how an element is displayed.
+    The default display value for most elements is <strong>block</strong> or <strong>inline</strong>.</p>
+
+  <h3>Block-level elements</h3>
+
+  <p>A block-level element always starts on a new line and takes up the full
+    width available <strong>(stretches out to the left and right as far as it can)</strong>.</p>
+
+  <div style="background-color: lavender;border-radius: 10px;border-left: 3px groove darkred;opacity: 0.8;">
+    <p>The <strong>"div"</strong> element is a block-level element.</p>
+  </div>
+  <div id="s">
+    <p>Examples of block-level elements:</p>
+    <ul>
+      <li><strong>"div"</strong></li>
+      <li><strong>"h1" to "h6"</strong></li>
+      <li><strong>"p"</strong></li>
+      <li><strong>"form"</strong></li>
+      <li><strong>"header"</strong></li>
+      <li><strong>"footer"</strong></li>
+      <li><strong>"section"</strong></li>
+    </ul>
+  </div>
+
+  <h3>Inline-elements</h3>
+
+  <p>An inline element does not start on a new line and only takes up as much width as necessary.</p>
+  <p id="s">This is <span style="border: 3px groove darkred;">an inline <strong>"span"</strong> element</span>
+    inside a paragraph.</p>
+  <div id="s">
+    <p>Examples of inline elements:</p>
+    <ul>
+      <li><strong>"span"</strong></li>
+      <li><strong>"img"</strong></li>
+      <li><strong>"a"</strong></li>
+    </ul>
+  </div>
+
+  <h3>Example:</h3>
+  <p>Examples of how inline and block elements work.</p>
+  <p>You can use the <strong>inline display</strong> to align a
+    <strong>list of links</strong> horizontally <strong>(from left to right)</strong>
+    instead of vertically <strong>(from top to bottom)</strong> like a list should normally be.
+  </p>
+  <div id="s">
+    <ul id="display">
+      <li><a href="https://www.w3schools.com/html/default.asp">Html</a></li>
+      <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+      <li><a href="https://www.w3schools.com/js/default.asp">Javascript</a></li>
+      <li><a href="https://www.w3schools.com/python/default.asp">Python</a></li>
+    </ul>
+    <p><em><strong>Note:</strong> This is not a <strong>Navigation Menu</strong>
+        like what we did in <strong>HTML practice</strong></em></p>
+  </div>
+
+  <h3>Display:None or Visibility hidden</h3>
+  <p>The <strong>"display:none"</strong> is used to remove (make disappear) an element.
+    The <strong>"visibility:hidden"</strong> is used to hide an element</p>
+
+  <p>For example, there is an element here but because of <strong>visibility:hidden</strong>, it is hidden</p>
+  <table id="s">
+    <tr>
+      <td><img src="https://images.pexels.com/photos/7825917/pexels-photo-7825917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="a girl" width="350" height="500" id="img" style="visibility: hidden;"></td>
+      <td><img src="https://images.pexels.com/photos/7825917/pexels-photo-7825917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="a girl" width="350" height="500" id="img"></td>
+    </tr>
+  </table>
+
+  <p>For example, there is a picture here but because of <strong>display:none</strong>
+    it isn't there anymore</p>
+  <table id="s">
+    <tr>
+      <td><img src="https://images.pexels.com/photos/7825917/pexels-photo-7825917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="a girl" width="350" height="500" id="img" style="display: none;"></td>
+      <td><img src="https://images.pexels.com/photos/7825917/pexels-photo-7825917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="a girl" width="350" height="500" id="img"></td>
+    </tr>
+  </table>
+
+  <hr size="3" noshade>
+
+  <h1>CSS position</h1>
+
+  <p>The position property specifies the type of positioning method used for an element.
+    There are five different position values:</p>
+  <ul style="font-weight: bold;list-style-type: none;" id="s">
+    <li>static</li>
+    <li>relative</li>
+    <li>fixed</li>
+    <li>absolute</li>
+    <li>sticky</li>
+  </ul>
+
+  <h2>Position: Static</h2>
+
+  <p>HTML elements are <strong>positioned static</strong> by <strong>default</strong>.
+    Static positioned elements are not affected by the top, bottom, left, and right properties.</p>
+  <p id="s">An element with <strong>position: static;</strong> is not positioned in any special way;
+    it is always positioned according to the normal flow of the page:</p>
+  <p style="border: 3px inset darkgreen;border-radius: 7px;">E.g This is an element with static position</p>
+
+  <h2>Position: Relative</h2>
+
+  <p>An element with <strong>relative position</strong> can be displaced using the
+    <strong>top, left, right, bottom (in pixels)</strong> properties.
+  </p>
+  <div id="s" style="position: relative;left: 200px;top: 25px;">
+    e.g An element with relative position which has been moved by <strong>200px from the left</strong>
+    and <strong>25px from the top</strong></div><br>
+  <h3>Position: Absolute</h3>
+  <p>The <strong>absolute position</strong> is a subset of the <strong>relative position.</strong>
+    Elements with absolute position <strong>need to be in a container</strong> to operate properly. <br>
+    So, you need to:
+  <ul>
+    <li>Create a container (div) with <strong>relative position</strong></li>
+    <li>Then, inside the container you add the <strong>element with absolute position</strong></li>
+    <li>The example below best explains this...</li>
+  </ul>
+  </p>
+
+  <h3>Combining absolute and relative positioning</h3>
+  <div id="relative">
+    <img src="https://images.pexels.com/photos/5650016/pexels-photo-5650016.jpeg?cs=srgb&dl=pexels-karolina-grabowska-5650016.jpg&fm=jpg" alt="egg" width="600" height="400">
+    <div class="topleft">
+      <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_top_left" style="text-decoration: none;color: inherit;" target="_blank">
+        Top Left</a>
+    </div>
+    <div class="topright">
+      <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_top_right" style="text-decoration: none;color: inherit;" target="_blank">
+        Top Right
+      </a>
+    </div>
+    <div class="center">
+      <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_center" style="text-decoration: none;color: inherit;" target="_blank">
+        Center</a>
+    </div>
+    <div class="bottomleft">
+      <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_bottom_left" style="text-decoration: none;color: inherit;" target="_blank">
+        Bottom Left</a>
+    </div>
+    <div class="bottomright">
+      <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_image_text_bottom_right" style="text-decoration: none;color: inherit;" target="_blank">
+        Bottom Right</a>
+    </div>
+  </div>
+
+  <h2>Position: Fixed</h2>
+
+  <p id="s">An element with <strong>position:fixed</strong> stays in the same place even if the page is scrolled.
+    The image at the <strong>bottom-right corner</strong> is an example. <br>
+    <strong><em>(check the code to see how we did it)</em></strong> <br>
+    The <strong>top, bottom, left, right</strong> properties are used to re-position the element.
+  </p>
+  <img id="fixed-img" src="https://live.staticflickr.com/65535/51379942339_cc5b2170d5_o.png" alt="laurel">
+
+  <div style="border: 4px inset darkgreen;border-radius: 7px;width: 90%;background-color: lavender;padding: 0px 20px;opacity: 0.8;">
+    <p style="text-align: center;"><strong><ins>Note:</ins></strong></p>
+    <p>The <strong>z-level property</strong> is used to
+      <strong>bring an element to the front</strong> or <strong>send it to the back.</strong>
+      <em>(see the code for the fixed image)</em><br>
+      <strong>Z-level: -1</strong> will send the element to the background.
+      That is why the circled image is in the background and all the text are at the front.
+    </p>
+  </div>
+
+  <h2>Position: Sticky</h2>
+
+  <p id="s">An element with <strong>position: sticky;</strong>
+    is positioned based on the user's scroll position. A sticky element <strong>toggles between
+      relative and fixed</strong> based on your <strong>scroll position.</strong><br>
+    The example below is a sticky element. <em>(see code)</em></p>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Overflow</h2>
+
+  <p id="s">The <strong>CSS overflow property</strong> controls what happens to
+    <strong>content that is too big to fit into an area.</strong>
+    It specifies whether to <strong>clip the content</strong> or to
+    <strong>add scrollbars</strong> when the content of an element
+    is too big to fit in the specified area.
+  </p>
+  <div id="s">
+    The overflow property has the following values:
+    <ul style="font-weight: bold;">
+      <li>Visible</li>
+      <li>Hidden</li>
+      <li>Scroll/auto</li>
+    </ul>
+  </div>
+
+  <h3>Overflow: Visible</h3>
+
+  <p id="s">By default, <strong>overflow is visible.</strong></p>
+  <div style="background-color: rosybrown;width: 300px;height: 100px;overflow: visible;border-radius: 8px;padding: 20px;">
+    <strong>Example:</strong>You can use the overflow property when you want to have better control of the layout.
+    The overflow property specifies what happens if content overflows an element's box.
+  </div><br><br><br>
+
+  <h3>Overflow: Hidden</h3>
+
+  <p id="s">With the <strong>hidden value</strong>, the overflow is <strong>clipped</strong>,
+    and the rest of the <strong>content is hidden</strong>:</p>
+  <div style="background-color: rosybrown;width: 300px;height: 100px;overflow:hidden;padding: 20px;border-radius: 8px;">
+    <strong>Example:</strong>You can use the overflow property when you want to have better control of the layout.
+    The overflow property specifies what happens if content overflows an element's box.
+  </div>
+
+  <h3>Overflow: Scroll</h3>
+
+  <p id="s">Setting the value to <strong>scroll</strong>, the overflow is clipped and a <strong>scrollbar is
+      added</strong> to scroll inside the box.<br>
+    <em><strong>Note</strong> that this will add a scrollbar both horizontally and vertically</em>
+    <strong>(even if you do not need it):</strong>
+  </p>
+  <div style="background-color: rosybrown;width: 300px;height: 100px;border-radius: 8px;padding: 20px;overflow:scroll;">
+    <strong>Example:</strong>You can use the overflow property when you want to have better control of the layout.
+    The overflow property specifies what happens if content overflows an element's box.
+  </div>
+  <p id="s"><strong>Note</strong> that in the example, we did not need a scrollbar at the bottom,
+    but it was added nevertheless.</p>
+
+  <h3>Overflow: Auto</h3>
+
+  <p id="s">The auto value is similar to scroll, but it
+    <strong>adds scrollbars only when necessary (It's best to use this):</strong>
+  </p>
+  <div style="background-color: rosybrown;width: 300px;height: 100px;border-radius: 8px;padding: 20px;overflow:auto;">
+    <strong>Example:</strong>You can use the overflow property when you want to have better control of the layout.
+    The overflow property specifies what happens if content overflows an element's box.
+  </div>
+  <p><em><strong>Notice</strong> that since a scrollbar was needed at the bottom, it was not added.</em></p>
+
+  <h3>Overflow-X and Overflow-Y</h3>
+  <p id="s">The <strong>overflow-x and overflow-y properties</strong> specifies whether to change the
+    overflow of content just <strong>horizontally or vertically (or both).</strong><br>
+    So, you can make the <strong>left/right</strong> or <strong>up/down</strong>
+    <em>visible, hidden, or scroll.</em>
+  </p>
+  <div style="background-color: rosybrown;width: 300px;height: 100px;border-radius: 8px;padding: 20px;overflow-x: hidden;overflow-y: scroll;">
+    <strong>Example:</strong>You can use the overflow property when you want to have better control of the layout.
+    The overflow property specifies what happens if content overflows an element's box.
+  </div>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Float and Clear</h2>
+
+  <h3>CSS Float</h3>
+
+  <p id="s">The float property is used for positioning and formatting content
+    e.g. let an image float left to the text in a container. <br>
+    The float property can either be: <strong>left, right, none, auto</strong></p>
+
+  <div id="s" style="overflow: auto;height: 280px;">
+    <p style="font-size: 28px;"><strong><ins>Example of Float Right</ins></strong><br></p>
+    <img src="https://images.pexels.com/photos/8544502/pexels-photo-8544502.jpeg?cs=srgb&dl=pexels-ron-lach-8544502.jpg&fm=jpg" alt="supermario" height="225" width="330"
+      style="float: right;margin-left: 20px;border: 1px inset tan;border-radius: 15px;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+      vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+      auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+      facilisis sed ornare eu, lobortis in odio.
+      Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+      Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+      sed nunc venenatis imperdiet sed ornare turpis.
+      Donec vitae dui eget tellus gravida venenatis.
+      Integer fringilla congue eros non fermentum. Sed</p>
+  </div><br>
+
+  <div id="s" style="overflow: auto;height: 280px;">
+    <p style="font-size: 28px;"><strong><ins>Example of Float Left</ins></strong><br></p>
+    <img src="https://images.pexels.com/photos/8544502/pexels-photo-8544502.jpeg?cs=srgb&dl=pexels-ron-lach-8544502.jpg&fm=jpg" alt="supermario" height="225" width="330"
+      style="float: left;margin-right: 20px;border: 1px inset tan;border-radius: 15px;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+      vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+      auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+      facilisis sed ornare eu, lobortis in odio.
+      Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+      Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+      sed nunc venenatis imperdiet sed ornare turpis.
+      Donec vitae dui eget tellus gravida venenatis.
+      Integer fringilla congue eros non fermentum. Sed</p>
+  </div><br>
+
+  <div id="s" style="overflow: auto;height: 280px;">
+    <p style="font-size: 28px;"><strong><ins>Example of No float</ins></strong><br></p>
+    <img src="https://images.pexels.com/photos/8544502/pexels-photo-8544502.jpeg?cs=srgb&dl=pexels-ron-lach-8544502.jpg&fm=jpg" alt="supermario" height="225" width="330" style="float: none;border: 1px inset tan;border-radius: 15px;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+      vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+      auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+      facilisis sed ornare eu, lobortis in odio.
+      Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+      Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+      sed nunc venenatis imperdiet sed ornare turpis.
+      Donec vitae dui eget tellus gravida venenatis.
+      Integer fringilla congue eros non fermentum. Sed</p>
+  </div><br>
+
+  <div id="s" style="overflow: auto;">
+    <p style="font-size: 25px;"><strong><ins>Example of Float Next To Each Other</ins></strong><br></p>
+    <ul style="list-style-type: none;">
+      <li style="float: left;background-color: darkgreen;padding: 20px;color: antiquewhite;">Left</li>
+      <li style="float: left;background-color: darkred;padding: 20px;color: antiquewhite;">Center</li>
+      <li style="float: left;background-color: yellow;padding: 20px;color: black;">Right</li>
+    </ul>
+    <p style="clear: left;padding-top: 20px;"><strong>Clearfix hack <em>(overflow:auto)</em></strong> was added to the flag.</p>
+  </div>
+
+  <h3>CSS Clear</h3>
+  <p id="s">When we use the <strong>float property</strong>,
+    and we want the <strong>next element to be below</strong> <em>(not on right or left)</em>,
+    we will have to use the <strong>clear property.</strong><br><br>
+    <em>The clear property specifies <strong>what should happen with the element
+        that is next to a floating element.</strong></em>
+  </p>
+  <p style="font-size: 25px;"><strong><ins>Examples</ins></strong></p>
+  <div id="s">
+    <strong><ins>Without clear</ins></strong><br>
+    <div style="padding: 10px;margin-right: 10px;border: 3px inset firebrick;
+      width: 50px;background-color: lavender;float: left;">
+      Float
+    </div>
+    <div style="border: 3px ridge green;padding: 5px 10px;">
+      Notice that this text is after the float element in the HTML code.
+      However, since the element floats to the left, the text flows around it.
+    </div>
+  </div><br>
+
+  <div id="s">
+    <strong><ins>With clear</ins></strong><br>
+    <div style="padding: 10px;margin-right: 10px;border: 3px inset firebrick;
+      width: 50px;background-color: lavender;float: left;">
+      Float
+    </div>
+    <div style="border: 3px ridge green;padding: 5px 10px;clear: left;">
+      Here, the <strong>"clear: left" property
+      </strong> moves the text down <strong>below the float element.</strong>.
+      <strong>In the code,</strong> the float element has <strong>float:left.</strong>
+      The value <strong>"left"</strong> clears elements <strong>floated to the left.</strong>
+      You can also clear <strong>"right"</strong> and <strong>"both".</strong>
+    </div>
+  </div><br>
+
+  <h3>Clearfix Hack</h3>
+  <p id="s">If a floated element is <strong>taller than the containing element,</strong>
+    it will <strong>"overflow"</strong> outside of its container.
+    We can then add a <strong>clearfix hack <em>(overflow:auto)</em></strong> to solve this problem:</p>
+
+  <h3><strong><ins>Without Clearfix</ins></strong></h3>
+  <div style="border: 3px outset rebeccapurple;background-color: lavender;">
+    <img src="https://images.pexels.com/photos/8544512/pexels-photo-8544512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="kids" height="250" width="150" style="float: Left;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+  </div><br><br><br><br><br>
+
+  <h3><strong><ins>With Clearfix</ins></strong></h3>
+  <div style="border: 3px outset rebeccapurple;background-color: lavender;overflow: auto;padding: 10px;">
+    <img src="https://images.pexels.com/photos/8544512/pexels-photo-8544512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="kids" height="250" width="150" style="float: Left;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+  </div>
+
+  <hr size="3" noshade>
+
+  <h2>More examples and practice</h2>
+
+  <h3 style="text-align: left;">Box-sizing property</h3>
+
+  <p>We will float 3 boxes of elements side by side</p>
+  <div style="box-sizing: border-box;overflow: auto;">
+    <div style="background-color: #d8bfd8;float: left;padding: 100px 70px;">
+      Box 1
+    </div>
+    <div style="background-color: #e2cfe2;float: left;padding: 100px 70px;">
+      Box 2
+    </div>
+    <div style="background-color: #ecdfec;float: left;padding: 100px 70px;">
+      Box 3
+    </div>
+  </div>
+
+  <p id="s"><em>Check the code to see what was added.</em>
+    <strong>(Try removing the overflow:auto/clearfix to see what happens.)</strong>
+  </p>
+
+  <div style="font-style: italic;border: 5px outset rosybrown;width: 80%;
+    padding: 10px 15px;background-color: #ecdfec;outline: 5px inset saddlebrown;outline-offset: 1px;">
+    <p><strong>What is box-sizing?</strong></p>
+    <p>You can easily create three floating boxes side by side.
+      However, when you add something that enlarges the width of each box
+      <strong>(e.g. padding or borders)</strong>, the box will break.
+      <strong>The box-sizing property</strong> allows us to
+      <strong>include the padding and border</strong> in the box's total width (and height),
+      making sure that the padding stays inside of the box and that it does not break.
+    </p>
+  </div>
+
+  <h3 style="text-align: left;">Floating images side by side</h3>
+
+  <div style="overflow: auto;">
+    <div>
+      <img src="https://images.pexels.com/photos/1767450/pexels-photo-1767450.jpeg?cs=srgb&dl=pexels-j-u-n-e-1767450.jpg&fm=jpg" alt="toy" style="float: left;padding: 5px;width: 33.3%;box-sizing: border-box;">
+    </div>
+    <div>
+      <img src="https://images.pexels.com/photos/2417578/pexels-photo-2417578.jpeg?cs=srgb&dl=pexels-j-u-n-e-2417578.jpg&fm=jpg" alt="toy" style="float: left;padding: 5px;width: 33.3%;box-sizing: border-box;">
+    </div>
+    <div>
+      <img src="https://images.pexels.com/photos/1767444/pexels-photo-1767444.jpeg?cs=srgb&dl=pexels-j-u-n-e-1767444.jpg&fm=jpg" alt="toy" style="float: left;padding: 5px;width: 33.3%;box-sizing: border-box;">
+    </div>
+  </div>
+  <p id="s"><em><strong>Note</strong> that we also use the clearfix hack to take care of the <strong>layout flow</strong>,
+      and that we add the <strong>box-sizing property</strong> to make sure that the <strong>image container
+        doesn't break due to extra padding.</strong> <strong>Try to remove this code to see the effect.</strong></em></p>
+
+  <h3 style="text-align: left;">Navigation Menu</h3>
+
+  <ul id="nav">
+    <li><a href="#home" style="background-color: red;">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <p id="s" style="font-style: italic;"><strong>Note:</strong> See code</p>
+
+  <h2>Web Layout Example</h2>
+
+  <div class="web">
+    <div class="head">
+      <h1 style="color: burlywood;text-align: left;padding-left: 30px;">Chania</h1>
+    </div>
+    <div class="body">
+      <div class="menu">
+        <ul>
+          <li><a href="#flight">The Flight</a></li>
+          <li><a href="#city">The City</a></li>
+          <li><a href="#island">The Island</a></li>
+          <li><a href="#food">The Food</a></li>
+        </ul>
+      </div>
+      <div class="text">
+        <h2>The City</h2>
+        <p>Chania is the capital of the Chania region on the island of Crete.
+          The city can be divided in two parts, the old town and the modern city.
+          You will learn more about web layout and responsive web pages in a later chapter.</p>
+      </div>
+    </div>
+    <div class="foot" style="color: burlywood;text-align: left;padding-left: 30px;">
+      <p>Footer text</p>
+    </div>
+  </div>
+
+  <hr size="3" noshade>
+
+  <div class="part3">
+    <a href="C:\Users\bomec\OneDrive\Documents\Programming\Personal site\CSS Part3.html" target="_blank">
+      Click for Part 3
+    </a>
+  </div><br><br>
+  <hr size="3" noshade>
+
+  <div id="sticky">
+    <a href="https://www.instagram.com/laurel_nk/" target="_blank" title="Instagram">CSS Lessons By: Laurel</a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>🤪CSS Practice</title>
+  <link href="https://fonts.googleapis.com/css?family=Palette+Mosaic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bahianita&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sofia&display=swap&effect=fire|neon|outline|emboss|shadow-multiple" rel="stylesheet">
+  <style media="screen">
+    #s {
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+    }
+
+
+    #g {
+      font-family: palette mosaic;
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+      font-size: 30px;
+    }
+
+    #g1 {
+      font-family: Amatic sc;
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+      font-size: 30px;
+      text-shadow: 5px 5px 5px crimson;
+    }
+
+    #g2 {
+      font-family: Bahianita;
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+      font-size: 30px;
+      text-shadow: 5px 5px 5px goldenrod;
+    }
+
+    #g3 {
+      font-family: special elite;
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+      font-size: 30px;
+      text-shadow: 5px 5px 5px navy;
+    }
+
+    #g4 {
+      font-family: monoton;
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+      font-size: 30px;
+      text-shadow: 5px 5px 5px rebeccapurple;
+    }
+
+
+
+    #effect {
+      font-family: sofia;
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+      font-size: 50px;
+    }
+
+
+    #link {
+      border: 3px inset darkred;
+      padding: 6px 10px;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      display: inline-block;
+    }
+
+    #link:hover {
+      border: 3px inset darkred;
+      background-color: darkred;
+      padding: 6px 10px;
+      text-decoration: none;
+      color: antiquewhite;
+      text-align: center;
+      text-shadow: 3px 3px 3px white;
+    }
+
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-decoration: underline;
+      text-align: center;
+      color: maroon;
+    }
+
+    body {
+      margin: 0px 70px;
+      padding: 20px;
+      font-size: 120%;
+      background-image: url(https://images.pexels.com/photos/4226873/pexels-photo-4226873.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4226873.jpg&fm=jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
+      background-attachment: fixed;
+      text-align: justify;
+      line-height: 1.8;
+      word-spacing: 3px;
+      font-family: times, georgia, garamond serif;
+    }
+
+    strong {
+      color: darkred;
+    }
+
+
+
+
+    #d {
+      background-color: silver;
+      margin: 20px;
+    }
+
+    div.first {
+      opacity: 0.1;
+      padding: 0.1px;
+    }
+
+    div.second {
+      opacity: 0.4;
+      padding: 0.1px;
+    }
+
+    div.third {
+      opacity: 0.7;
+      padding: 0.1px;
+    }
+
+    div.fourth {
+      opacity: 1;
+      padding: 0.1px;
+    }
+
+
+
+    .part2 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .part2 a {
+      text-decoration: none;
+      border: 3px outset darkred;
+      padding: 20px;
+      font-size: 25px;
+      color: antiquewhite;
+      background-color: #191919;
+      opacity: 0.8;
+      font-family: monoton;
+    }
+
+    .part2 a:hover {
+      background-color: black;
+      text-shadow: 5px 5px 5px darkred;
+      opacity: 1;
+      font-size: 28px;
+    }
+
+
+
+    #fixed-img {
+      width: 15%;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+
+    #sticky {
+      position: sticky;
+      bottom: 0;
+      text-align: center;
+      opacity: 0.4;
+      font-family: monoton;
+      font-size: 30px;
+    }
+
+    #sticky a {
+      text-decoration: none;
+      color: black;
+    }
+
+    #sticky:hover {
+      opacity: 1;
+      text-shadow: 3px 3px 3px rebeccapurple;
+      font-size: 33px;
+    }
+
+
+
+
+    .mbar {
+      /*For the navigation bar as a whole*/
+      position: sticky;
+      z-index: 1;
+      opacity: 0.4;
+      top: 0;
+    }
+
+    .mbar:hover {
+      opacity: 1;
+    }
+
+    .bar {
+      /* for main links of the navigation bar (home/html/css etc)*/
+      list-style-type: none;
+      background-color: black;
+      overflow: auto;
+      padding: 0;
+      margin: 0;
+      border: 1px solid black;
+      border-radius: 100px;
+    }
+
+    .bar li {
+      float: left;
+    }
+
+    .bar a {
+      color: antiquewhite;
+      text-decoration: none;
+      display: inline-block;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .bar a:hover {
+      background-color: #191919;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      /*For the CSS dropdown */
+      display: inline-block;
+    }
+
+    .droplinks {
+      display: none;
+      background-color: gainsboro;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+    }
+
+    .droplinks:hover {
+      opacity: 0.8;
+    }
+
+    #p4 {
+      border: none;
+    }
+
+    #p4:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .droplinks a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 1px solid silver;
+    }
+
+    .droplinks a:hover {
+      background-color: darkgrey;
+    }
+
+    .dropdown:hover .droplinks {
+      display: block;
+    }
+
+    #h {
+      background-color: darkslategrey;
+    }
+
+
+
+    .ang {
+      /* for the angela dropdown*/
+      display: inline-block;
+    }
+
+    .anglink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    .anglink:hover {
+      opacity: 0.8;
+    }
+
+    #a3 {
+      border: none;
+    }
+
+    #a3:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .anglink a {
+      display: block;
+      padding: 10px 20px;
+      color: black;
+      border-bottom: 1px solid silver;
+    }
+
+    .anglink a:hover {
+      background-color: darkgrey;
+    }
+
+    .ang:hover .anglink {
+      display: block;
+    }
+
+
+
+    .adv {
+      display: inline-block;
+    }
+    .advlink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      opacity: 0.4;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .advlink:hover {
+      opacity: 0.8;
+    }
+    .advlink a {
+      display: block;
+      color: black;
+    }
+    .advlink a:hover {
+      background-color: darkgrey;
+    }
+
+    #adv3 {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .adv:hover .advlink {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <hr size="3" noshade>
+
+  <div class="mbar">
+    <ul class="bar">
+      <li><a id="h" href="#">Home</a></li>
+      <li><a href="html.html" target="_blank">HTML</a></li>
+      <li class="dropdown">
+        <a href="#">CSS</a>
+        <div class="droplinks">
+          <a href="index.html">Part 1</a>
+          <a href="CSS Part2.html">Part 2</a>
+          <a href="CSS Part3.html">Part 3</a>
+          <a id="p4" href="CSS part4.html">Part 4</a>
+        </div>
+      </li>
+      <li class="ang">
+        <a href="#">Angela</a>
+        <div class="anglink">
+          <a href="angela.html" target="_blank">Homepage</a>
+          <a href="Contact me.html" target="_blank">Contact</a>
+          <a id="a3" href="About me.html" target="_blank">About</a>
+        </div>
+      </li>
+      <li style="float: right;"class="adv">
+        <a href="#">Advanced</a>
+        <div class="advlink">
+          <a href="Advanced 1.html">Part 1</a>
+          <a id="adv3"href="Advanced 2.html">Part 2</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <h1>Opacity</h1>
+  <h2 style="opacity: 0.1;background-color: steelblue;padding: 15px;">
+    A text with opacity at 0.1</h2>
+  <h2 style="opacity: 0.4;background-color: steelblue;padding: 15px;">
+    A text with opacity at 0.1</h2>
+  <h2 style="opacity: 0.7;background-color: steelblue;padding: 15px;">
+    A text with opacity at 0.1</h2>
+  <h2 style="opacity: 1;background-color: steelblue;padding: 15px;">
+    A text with opacity at 0.1</h2>
+
+  <p style="text-align: center;"><strong>OR (with "Div")</strong></p>
+  <div class="first" id="d">
+    <h2>Text with opacity 0.1</h2>
+  </div>
+  <div class="second" id="d">
+    <h2>Text with opacity 0.4</h2>
+  </div>
+  <div class="third" id="d">
+    <h2>Text with opacity 0.7</h2>
+  </div>
+  <div class="fourth" id="d">
+    <h2>Text with opacity 1</h2>
+  </div>
+
+  <hr size="3" noshade>
+
+  <h2>Background image attributes</h2>
+  <ul>
+    <li>The background-attachment property specifies whether the
+      background image should scroll or be fixed (will not scroll with the rest
+      of the page):</li>
+  </ul>
+
+  <hr size="3" noshade>
+
+  <h2>Borders</h2>
+  <ul>
+    <li><strong>CSS border width:</strong> The border-width property specifies
+      the width of the four borders.</li>
+    <ul>
+      <li>Specific Side Widths: The border-width property can have from one to
+        four values (for the top border, right border, bottom border, and the
+        left border</li>
+    </ul>
+    <li><strong>CSS border color:</strong>The border-color property is used to
+      set the color of the four borders.</li>
+    <ul>
+      <li>The border-color property can have from one to four values
+        (for the top border, right border, bottom border, and the left border).
+      </li>
+    </ul>
+    <li><strong>The border-radius property</strong> is used to add rounded
+      borders to an element</li>
+  </ul>
+
+  <p>The <strong>border-style/border property</strong> can be used to combine
+    all these properties together (style, width, and color). But when you want
+    to individually customize an aspect of the border, then you can use them
+    individually (border-width, border-color). You can also combine all the
+    properties to customize one side with the <strong>border-top-style/
+      border-left-style/ border-bottom-style/ border-right-style</strong></p>
+
+  <p style="border: dotted;border-width:3px 5px;">A dotted border with different
+    width <strong>3px (up/down) and 5px (sides)</strong></p>
+  <p style="border: dashed 5px;">A dashed border with same width <strong>(5px)</strong></p>
+  <p style="border: solid 3px olive;">A solid border with same color.</p>
+  <p style="border: double 5px; border-color: darkred darkgreen indigo yellow;">
+    A double border with different colors.</p>
+  <p style="border: groove 5px;">A groove border</p>
+  <p style="border: ridge 5px olive;">A ridge border</p>
+  <p style="border: inset 4px rebeccapurple;">An inset border</p>
+  <p style="border: outset 4px rosybrown;">An outset border</p>
+  <p>No border</p>
+  <p style="border: hidden;">A hidden border</p>
+  <p style="border-style: dotted dashed solid double;border-width: medium;">
+    A mixed border</p>
+  <p style="font-size: 100%;text-align: center;"><strong>OR (with border-left-style etc)</strong></p>
+
+  <p style="border-left: double 5px gold;border-top: dashed 3px brown;
+  border-right: solid 7px green;border-bottom: groove 7px dodgerblue;">A more packed mixed border</p>
+
+  <h2>Sexy sample</h2>
+  <p style="background-color: lightgray;padding: 7px;border-left: ridge 5px olive;
+  border-bottom: groove 5px firebrick;">Something sexy with mixed borders</p>
+
+  <p style="background-color: lightgray;padding: 7px;border-radius: 10px;
+  border-left: ridge 5px olive;border-bottom: groove 5px firebrick;">
+    Mixed border with rounded borders (border-radius)</p>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Margins</h2>
+  <div style="background-color: lightgrey;margin-left: 150px;
+  margin-right: 150px;margin-top: 50px;margin-bottom: 80px;
+  border: groove 5px olive;opacity: 0.7;border-radius: 10px;padding: 30px;">
+    <p>Margins are used to <strong>create space around elements, outside of any defined borders.</strong>
+      <br>CSS has properties for specifying the margin for each side of an element:
+    <ul>
+      <li>margin-top</li>
+      <li>margin-right</li>
+      <li>margin-bottom</li>
+      <li>margin-left</li>
+    </ul>
+    </p>
+  </div>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Padding</h2>
+  <div style="background-color: lightgray;opacity: 0.8;padding: 30px 150px 30px 30px;margin: 50px;border-left: groove 5px darkred;">
+    <p>Padding is used to create space <strong>around an element's content,
+        inside of any defined borders.</strong>
+      With CSS, you have full control over the padding. There are properties for
+      setting the padding for each side of an element (top, right, bottom, and left).
+      CSS has properties for specifying the padding for each side of an element:
+    <ul>
+      <li>padding-top</li>
+      <li>padding-right</li>
+      <li>padding-bottom</li>
+      <li>padding-left</li>
+    </ul>
+    </p>
+  </div>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Height and Width</h2>
+  <div style="background-color: lightgray;opacity: 0.8;height: 400px;width: 70%;padding: 50px;margin-left: 50px;
+  border-left: outset 8px firebrick;border-bottom: outset 8px firebrick;border-radius: 10px;">
+    <p>The height and width properties are <strong>used to set the height and width of an element</strong>.
+      The height and width properties do not include padding, borders, or margins.
+      It sets the height/width of the area inside the padding, border, and margin of the element.
+      <br>The height is set <strong>in pixels</strong> and the width <strong>in percentage</strong>.
+    </p>
+  </div>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Outline</h2>
+
+  <div style="background-color: lightgray;opacity: 0.8;margin: 40px 90px;padding: 70px;
+  border-left: ridge 8px darkred;border-bottom: ridge 8px darkred;
+  outline: groove 8px olive;outline-offset: 3px;">
+    <p><strong>An outline </strong>is a line that is drawn around elements,
+      <strong>OUTSIDE the borders</strong>,
+      to make the element <strong>"stand out"</strong>.
+      CSS has the following outline properties:
+    <ul>
+      <li><strong>Outline-style:</strong> The ouline-style has the same properties as border-style.</li>
+      <li><strong>Outline-color:</strong> The outline color is same as border color properties.</li>
+      <li><strong>Outline-width:</strong> Same as border width.</li>
+      <li><strong>Outline-offset:</strong> It creates space between the <strong>border and the outline.</strong></li>
+    </ul>
+    </p>
+  </div>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Text (text formatting)</h2>
+
+  <h3>Text align</h3>
+
+  <div style="background-color: lightgray;opacity: 0.7;
+  padding: 5px 50px;margin: auto;width: 65%;border-bottom: ridge 5px darkslateblue;
+  border-left: ridge 5px darkslateblue;outline: groove 5px saddlebrown;outline-offset: 1px;">
+    <p style="text-align: center;">Text aligned in the center</p>
+    <p style="text-align: left;">Text aligned to the left</p>
+    <p style="text-align: right;">Text aligned to the right</p><br>
+    <p><strong>Note:</strong> To align the entire <strong>"div" element/box</strong> in the middle,
+      the way you see, you can use the <strong>"margin:auto" property</strong>
+      and <strong>set the width.</strong></p>
+  </div>
+
+  <p id="s">Use the <strong>"text align:justify"</strong> property to make the entire
+    text to be well aligned from all corners just like on <strong>MS Word.</strong>
+    We're going to use it for the entire page to correctly align every sentence.</p>
+
+  <h3>The direction property (direction)</h3>
+  <p>The <strong>direction tag</strong> and <strong>unicode-bidi</strong>
+    can also be used to change the direction of a text. <strong>(like in Arab).
+      Rtl</strong> means <strong>right to left.</strong></p>
+
+  <p style="background-color: lightgray;opacity: 0.8;border-radius: 8px;
+  border-left: groove 4px saddlebrown;padding: 10px;width: 55%;">This is a default text</p>
+  <p style="direction: rtl;unicode-bidi: bidi-override;background-color: lightgray;
+  opacity: 0.8;border-radius: 8px;border-right: groove 4px saddlebrown;
+  padding: 10px;margin-left: 350px;">This is a backward text</p>
+
+  <h3>Vertical-align property</h3>
+  <ul id="s">
+    <li><strong>Super alignment:</strong> A text with
+      <span style="vertical-align: super;">sup alignment</span>.
+    </li>
+  </ul>
+  <ul id="s">
+    <li><strong>Sub alignment:</strong> A text with
+      <span style="vertical-align: sub;">sub alignment</span>.
+    </li>
+  </ul>
+
+  <h3>Text decoration (text-decoration)</h3>
+  <p id="s" style="text-decoration: overline;">Text with overline</p>
+  <p id="s" style="text-decoration: underline;">Underlined text</p>
+  <p id="s" style="text-decoration: line-through;">Text with line-through</p>
+  <p id="s"><strong>Removing decorations from text:</strong>
+    You can remove underlining from links using the
+    <strong>text decoration:none</strong> property.For example:
+    <a style="text-decoration: none;" href="https://www.w3schools.com/css/css_text_transformation.asp">W3schools</a>
+  </p>
+
+  <h3>Text transformation (text-transform)</h3>
+  <p id="s" style="text-transform: uppercase;">Text in uppercase</p>
+  <p id="s" style="text-transform: lowercase;">Text in lowercase</p>
+  <p id="s" style="text-transform: Capitalize;">Capitalized text</p>
+
+  <h3>Text spacing</h3>
+  <p style="text-decoration: underline;"><strong>Text indentation:</strong><br>
+  <div id="s" style="padding: 20px;text-indent: 40px;">
+    Text indent is used when you want to write a text in paragraph form just like in MS word.
+    So the text will start with some space. Text indentation is set in pixels.
+    I'm just writing plenty stuff so that you can see how
+    what the parahraph will look like.</div></span></p>
+
+  <p><strong><ins>Letter spacing</ins></strong></p>
+  <p id="s" style="letter-spacing: 5px;"><strong>Letter spacing:</strong>
+    Used to create space between letter like this.</p>
+  <p id="s" style="letter-spacing: -2px;">This is a sentence with negative letter spacing.</p>
+
+  <p><strong><ins>Line height and word spacing:</ins></strong></p>
+  <p id="s" style="line-height: 3;word-spacing: 20px;">
+    Line height <strong>(not in px)</strong> is used to specify space between
+    lines in a paragraph. Word spacing is used to create space between words (not letters).
+    This current text is an example of such.</p>
+  <p id="s" style="line-height: 0.5;word-spacing: -5px;">
+    This paragraph has smaller line height and word-spacing.<br>
+    This paragraph has smaller line height and word-spacing</p>
+
+  <h3>Text shadow and blur</h3>
+  <p id="s">The <strong>text-shadow property</strong> adds shadow to text.
+    In its simplest use, you only specify the <strong>horizontal shadow (2px)</strong>
+    and <strong>the vertical shadow (2px)</strong>,
+    then <strong>the blur (5px)</strong> and <strong>color</strong>:</p>
+
+  <p id="s" style="font-size: 40px;letter-spacing: 4px;text-align:center;text-shadow: 3px 3px 3px olive;">Shadow effect</p><br><br>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Fonts</h2>
+  <p><strong>Note:</strong> Always write 2 or 3 font families in the code, so that
+    in case the browser does not recognize the first font, it will recognize the second.</p>
+
+  <p><strong><ins>Font style</ins></strong></p>
+  <p id="s" style="font-style: italic;">Used to specify italic/oblique text (this text is in italic).</p>
+  <p id="s" style="font-style: oblique;">An oblique text</p>
+
+  <p><strong><ins>Font weight</ins></strong></p>
+  <p id="s" style="font-weight: 600;">Used to specify text boldness</p>
+  <p id="s" style="font-weight: 900;">Used to specify text boldness</p>
+
+  <p><strong><ins>Font variant</ins></strong></p>
+  <p id="s"><strong>The font-variant property</strong> specifies whether or not a text should
+    be displayed in a small-caps font.</p>
+  <p>In a small-caps font, all lowercase letters are converted to uppercase letters.
+    However, the converted uppercase letters appears in a smaller font size than the
+    original uppercase letters in the text.</p>
+
+  <p id="s" style="font-variant: normal;">Nornal font variant</p>
+  <p id="s" style="font-variant: small-caps;">Small caps font variant</p>
+
+  <h2>Google Fonts</h2>
+  <p id="g">This is a Font from Google</p>
+  <div id="s">To include a <strong>Google font</strong>:
+    <ul>
+      <li>Open google font site</li>
+      <li>Select the font you want</li>
+      <li>Then, copy the <strong>link href</strong> containing the font's name.</li>
+      <li>Paste it in the <strong>head.</strong></li>
+    </ul>
+  </div>
+  <p>More examples:</p>
+  <p id="g1">Fonts from Google look dope</p>
+  <p id="g2">Fonts from Google look sweet</p>
+  <p id="g3">Fonts from Google look special</p>
+  <p id="g4">Fonts from Google look beautiful</p>
+
+  <div id="s"><strong>How to add effects:</strong>
+    <ul>
+      <li>After adding the font from google, go to the font code and change it from
+        <strong>CSS2</strong> to <strong>CSS.</strong>
+      </li>
+      <li>At the end of the font code, add <strong>&effect="name of the effect"</strong></li>
+      <li>Go to the text that is meant to have the effect and add
+        <strong>class="font-effect-name of the effect"</strong>
+      </li>
+      <li>This is the list of available effects: <strong>fire, neon, emboss, outline, shadow-multiple</strong></li>
+    </ul>
+    <p><strong>Note:</strong> Effects don't work with all fonts.</p>
+  </div>
+  <p>Here is an example(with sofia font):</p>
+  <p id="effect" class="font-effect-fire">Font with effects</p>
+  <p id="effect" class="font-effect-outline">Font with effects</p>
+  <p id="effect" class="font-effect-emboss">Font with effects</p>
+  <p id="effect" class="font-effect-shadow-multiple">Font with effects</p>
+  <p id="effect" class="font-effect-neon">Font with effects</p>
+
+  <hr size="3" noshade>
+
+  <h2>CSS Links (reminder)</h2>
+
+  <div id="s">We studied links in Html practice, so this is just a reminder. We'll look at;
+    <ul>
+      <li>Link color</li>
+      <li>a:link/ a:visited/ a:hover/ a:active</li>
+      <li>Link decoration</li>
+      <li>Link background color</li>
+      <li>Making links buttons</li>
+    </ul>
+  </div>
+  <p>Examples:</p>
+  <p id="s">This link is for <a id="link" href="https://www.w3schools.com/" target="_blank" title="W3schools">W3 schools</a>
+  </p>
+
+  <h3>Cursor types</h3>
+  <div id="s">
+    <p>This example demonstrates the different types of cursors
+      (the default cursor for links is <strong>pointer.</strong>)Pass the pointer on it to see effect:</p>
+    <p style="cursor:auto">auto</p>
+    <p style="cursor:crosshair">crosshair</p>
+    <p style="cursor:default">default</p>
+    <p style="cursor:e-resize">e-resize</p>
+    <p style="cursor:help">help</p>
+    <p style="cursor:move">move</p>
+    <p style="cursor:n-resize">n-resize</p>
+    <p style="cursor:ne-resize">ne-resize</p>
+    <p style="cursor:nw-resize">nw-resize</p>
+    <p style="cursor:pointer">pointer</p>
+    <p style="cursor:progress">progress</p>
+    <p style="cursor:s-resize">s-resize</p>
+    <p style="cursor:se-resize">se-resize</p>
+    <p style="cursor:sw-resize">sw-resize</p>
+    <p style="cursor:text">text</p>
+    <p style="cursor:w-resize">w-resize</p>
+    <p style="cursor:wait">wait</p>
+  </div>
+
+  <hr size="3" noshade>
+
+  <h2>CSS List styling</h2>
+
+  <div id="s" style="line-height: 1.2;">
+    <p>Unordered list with different list-style-type</p>
+    <ul style="list-style-type: circle;">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ul>
+    <ul style="list-style-type:square;">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ul>
+  </div>
+  <div id="s" style="line-height: 1.2;">
+    <p>Ordered list with different list-style-type (look at the code)</p>
+    <ol type="1">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ol>
+    <ol type="a">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ol>
+    <ol type="A">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ol>
+    <ol type="i">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ol>
+    <ol type="I">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ol>
+  </div>
+  <div style="line-height: 1.2;" id="s">
+    <p>You can also remove numbering/bulletpoints from a list using <strong>list-style-type:none</strong></p>
+    <ol style="list-style-type: none;">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ol>
+    <ul style="list-style-type:none;">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Sugar</li>
+    </ul>
+  </div>
+
+  <h3>Styling list with colors (see code)</h3>
+
+  <div style="width: 80%;">
+    <ul style="list-style-type:square;background-color: rosybrown;padding: 25px;padding-left: 70px;">
+      <li style="background-color: thistle;">Coffee</li>
+      <li style="background-color: thistle;">Tea</li>
+      <li style="background-color: thistle;">Milk</li>
+      <li style="background-color: thistle;">Sugar</li>
+    </ul>
+  </div>
+  <div style="width: 80%;">
+    <ol type="i" style="background-color: slateblue;padding: 25px;padding-left: 70px;">
+      <li style="background-color: #a89de1;">Coffee</li>
+      <li style="background-color: #a89de1;margin-top: 10px;">Tea</li>
+      <li style="background-color: #a89de1;margin-top: 10px;">Milk</li>
+      <li style="background-color: #a89de1;margin-top: 10px;">Sugar</li>
+    </ol>
+  </div>
+
+  <hr size="3" noshade>
+
+  <div class="part2">
+    <a href="C:\Users\laurel\OneDrive\Documents\Programming\Personal site\CSS Part2.html" target="_blank">
+      Click for Part 2</a>
+  </div><br>
+  <hr size="3" noshade>
+
+
+  <img id="fixed-img" src="https://live.staticflickr.com/65535/51379942339_cc5b2170d5_o.png" alt="laurel">
+  <div id="sticky">
+    <a href="https://www.instagram.com/laurel_nk/" target="_blank" title="Instagram">CSS Lessons By: Laurel</a>
+  </div>
+</body>
+
+</html>

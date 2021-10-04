@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>🤪CSS (Part 3)</title>
+  <link href="https://fonts.googleapis.com/css?family=Palette+Mosaic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bahianita&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sofia&display=swap&effect=fire|neon|outline|emboss|shadow-multiple" rel="stylesheet">
+  <style media="screen">
+    #s {
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+    }
+
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-decoration: underline;
+      text-align: center;
+      color: maroon;
+    }
+
+    body {
+      margin: 0 70px;
+      padding: 20px;
+      font-size: 120%;
+      background-image: url(https://images.pexels.com/photos/4226873/pexels-photo-4226873.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4226873.jpg&fm=jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
+      background-attachment: fixed;
+      text-align: justify;
+      line-height: 1.8;
+      word-spacing: 3px;
+      font-family: times, georgia, garamond serif;
+      counter-reset: section;
+    }
+
+    strong {
+      color: darkred;
+    }
+
+
+
+    #fixed-img {
+      /*For my FIXED picture at the bottom right */
+      width: 15%;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+
+    #sticky {
+      /* FOR THE STICKY BAR AT THE BOTTOM (CSS lessons by: laurel)*/
+      position: sticky;
+      bottom: 0;
+      text-align: center;
+      opacity: 0.4;
+      font-family: monoton;
+      font-size: 30px;
+      clear: both;
+    }
+
+    #sticky a {
+      text-decoration: none;
+      color: black;
+    }
+
+    #sticky:hover {
+      opacity: 1;
+      text-shadow: 3px 3px 3px rebeccapurple;
+      font-size: 33px;
+    }
+
+
+
+
+
+
+    .pseudo-links {
+      /*pseudo element: hover/link/visited/active */
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .pseudo-links a:link {
+      color: antiquewhite;
+      background-color: darkgreen;
+      padding: 20px;
+      text-decoration: none;
+    }
+
+    .pseudo-links a:visited {
+      background-color: darkgreen;
+      color: red;
+    }
+
+    .pseudo-links a:hover {
+      background-color: darkslategrey;
+      color: antiquewhite;
+    }
+
+    .pseudo-links a:active {
+      color: white;
+      background-color: darkred;
+    }
+
+
+
+    .tooltip {
+      /* tooltip (pseudo element)*/
+      width: 50%;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 5px 5px 5px purple;
+      font-size: 23px;
+    }
+
+    .tooltip p {
+      background-color: darkred;
+      width: 50%;
+      text-align: center;
+      padding: 20px;
+      display: none;
+      color: antiquewhite;
+    }
+
+    div:hover p {
+      display: block;
+    }
+
+
+
+
+    .tooltip2 {
+      /* second tooltip (with input)*/
+      width: 25%;
+    }
+
+    .tooltip2 form {
+      display: none;
+    }
+
+    div:hover form {
+      display: block;
+    }
+
+
+
+
+
+    .firstline p::first-line {
+      /*pseudo-elements */
+      font-variant: small-caps;
+      color: darkgreen;
+      text-shadow: 3px 3px 3px darkgreen;
+      font-size: 25px;
+    }
+
+    .firstletter p::first-letter {
+      font-size: 40px;
+      color: green;
+      font-weight: bold;
+      text-shadow: 5px 5px 5px darkgreen;
+    }
+
+    .combine p::first-letter {
+      font-size: 40px;
+      color: green;
+      font-weight: bold;
+      text-shadow: 5px 5px 5px darkgreen;
+    }
+
+    .combine p::first-line {
+      font-variant: small-caps;
+      color: darkred;
+      text-shadow: 3px 3px 3px olive;
+      font-size: 25px;
+    }
+
+
+    .before ::before {
+      content: "😁";
+      /*always put in quotes*/
+      font-size: 30px;
+    }
+
+    .after ::after {
+      content: "🤪";
+      font-size: 30px;
+    }
+
+    .marker ::marker {
+      /* list pseudo elements*/
+      color: darkred;
+      font-size: 30px;
+      text-shadow: 3px 3px 3px black;
+    }
+
+
+    .selection ::selection {
+      /* for highlights*/
+      background-color: rebeccapurple;
+      color: antiquewhite;
+      text-shadow: 3px 3px 3px red;
+    }
+
+
+
+
+    .opacity-hover img:hover {
+      /* CSS Opacity (forest images)*/
+      opacity: 0.6;
+      overflow: auto;
+    }
+
+
+
+    .nav {
+      /* CSS vertical navigation bar*/
+      list-style-type: none;
+      background-color: silver;
+      width: 30%;
+      padding: 0;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 5px 10px;
+    }
+
+    .nav a:hover {
+      background-color: dimgrey;
+    }
+
+    #home {
+      background-color: darkgreen;
+      color: antiquewhite;
+    }
+
+    #home:hover {
+      background-color: darkolivegreen;
+    }
+
+
+
+
+
+    .drop {
+      /* for basic dropdown (hover over me)*/
+      position: relative;
+      display: inline-block;
+    }
+
+    .drop p {
+      background-color: silver;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 1px 8px 15px 1px grey;
+      display: none;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .drop:hover p {
+      display: block;
+    }
+
+
+
+
+    .dd {
+      /* for dropdown menu which has 3 links*/
+      display: inline-block;
+      position: relative;
+      margin-left: 100px;
+    }
+
+    .dd button {
+      background-color: darkslategrey;
+      padding: 20px 30px;
+      font-family: times;
+      color: antiquewhite;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dl {
+      display: none;
+      background-color: silver;
+      position: absolute;
+      width: 100%;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+    }
+
+    .dl a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      padding: 10px 15px;
+    }
+
+    .dl a:hover {
+      background-color: grey;
+    }
+
+    .dd:hover .dl {
+      display: block;
+    }
+
+
+
+    .dropimage {
+      /* for image dropdowns*/
+      position: relative;
+      display: inline-block;
+    }
+
+    .imglink {
+      background-color: darkslategrey;
+      display: none;
+      position: absolute;
+    }
+
+    .desc {
+      text-align: center;
+      color: antiquewhite;
+    }
+
+    .dropimage:hover .imglink {
+      display: block;
+    }
+
+
+
+
+
+    .mbar {
+      /*For the navigation bar as a whole*/
+      position: sticky;
+      z-index: 1;
+      opacity: 0.4;
+      top: 0;
+    }
+
+    .mbar:hover {
+      opacity: 1;
+    }
+
+    .bar {
+      /* for main links of the navigation bar (home/html/css etc)*/
+      list-style-type: none;
+      background-color: black;
+      overflow: auto;
+      padding: 0;
+      margin: 0;
+      border: 1px solid black;
+      border-radius: 100px;
+    }
+
+    .bar li {
+      float: left;
+    }
+
+    .bar a {
+      color: antiquewhite;
+      text-decoration: none;
+      display: inline-block;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .bar a:hover {
+      background-color: #191919;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      /*For the CSS dropdown */
+      display: inline-block;
+    }
+
+    .droplinks {
+      display: none;
+      background-color: gainsboro;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+    }
+
+    .droplinks:hover {
+      opacity: 0.8;
+    }
+
+    #p4 {
+      border: none;
+    }
+
+    #p4:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .droplinks a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 1px solid silver;
+    }
+
+    .droplinks a:hover {
+      background-color: darkgrey;
+    }
+
+    .dropdown:hover .droplinks {
+      display: block;
+    }
+
+    #h {
+      background-color: darkslategrey;
+    }
+
+
+
+    .ang {
+      /* for the angela dropdown*/
+      display: inline-block;
+    }
+
+    .anglink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    .anglink:hover {
+      opacity: 0.8;
+    }
+
+    #a3 {
+      border: none;
+    }
+
+    #a3:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .anglink a {
+      display: block;
+      padding: 10px 20px;
+      color: black;
+      border-bottom: 1px solid silver;
+    }
+
+    .anglink a:hover {
+      background-color: darkgrey;
+    }
+
+    .ang:hover .anglink {
+      display: block;
+    }
+
+
+
+    .adv {
+      display: inline-block;
+    }
+    .advlink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      opacity: 0.4;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .advlink:hover {
+      opacity: 0.8;
+    }
+    .advlink a {
+      display: block;
+      color: black;
+    }
+    .advlink a:hover {
+      background-color: darkgrey;
+    }
+
+    #adv3 {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .adv:hover .advlink {
+      display: block;
+    }
+
+
+
+
+    .gallery {
+      /* For the gallery of pictures with guns*/
+      width: 350px;
+      float: left;
+      margin: 4px;
+      opacity: 0.4;
+    }
+
+    .gallery img {
+      width: 100%;
+    }
+
+    .gallery:hover {
+      opacity: 1;
+    }
+    @media screen and (max-width:800px) {
+      .gallery {
+        float: none;
+      }
+    }
+
+    .des {
+      /* for the Description of the picture*/
+      background-color: maroon;
+      padding: 5px;
+      color: antiquewhite;
+      text-align: center;
+    }
+
+
+
+
+    .eg1 {
+      /* to style the div that contains the form*/
+      background-color: gainsboro;
+      box-sizing: border-box;
+      padding: 20px;
+      opacity: 0.8;
+      border-radius: 10px;
+      border: 5px outset darkgrey;
+    }
+
+    .form1 input[type="text"] {
+      /*For the forms styling*/
+      width: 70%;
+      box-sizing: border-box;
+      padding: 25px 20px;
+      margin: 10px 0px;
+      border: none;
+      border-radius: 20px;
+      background-color: silver;
+      color: black;
+      display: block;
+      box-shadow: 1px 1px 10px 0px darkslategrey;
+      opacity: 0.8;
+    }
+
+
+    .eg2 {
+      /* to style the div that contains the form*/
+      background-color: #e1cdcd;
+      opacity: 0.8;
+      padding: 20px 30px;
+      border-radius: 10px;
+      border: 3px ridge rosybrown;
+    }
+
+    .form2 input[type="text"] {
+      /*For the forms styling*/
+      box-sizing: border-box;
+      display: block;
+      width: 40%;
+      padding: 20px 10px;
+      border: none;
+      border-bottom: 3px ridge darkslategrey;
+      background-color: linen;
+      border-radius: 30px;
+      transition: width 0.5s ease-in-out;
+    }
+
+    .form2 label {
+      color: brown;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .form2 input[type="text"]:focus {
+      /* to style the forms when clicked on*/
+      background-color: antiquewhite;
+      border: none;
+      border-bottom: 3px ridge darkred;
+      border-radius: 10px;
+      outline: none;
+      width: 70%;
+      border-radius: 30px;
+    }
+
+
+
+    .eg3 {
+      background-color: #dfe7f2;
+      opacity: 0.8;
+      padding: 20px;
+      border: 3px inset lightslategray;
+      border-radius: 10px;
+    }
+
+    .form3 select {
+      width: 40%;
+      padding: 20px 20px;
+      background-color: lightslategray;
+      opacity: 0.6;
+      font-size: 21px;
+      color: antiquewhite;
+      text-shadow: 1px 2px 1px black;
+      font-family: times;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .form3 select:focus {
+      box-shadow: 2px 2px 10px 1px rebeccapurple;
+      outline: none;
+      width: 70%;
+    }
+
+
+
+
+
+    .eg4 {    /* A summary of all the input/select styling we learned */
+      background-color: darkslategrey;
+      opacity: 0.8;
+      padding: 20px 120px;
+      border: none;
+      border-radius: 200px;
+      box-shadow: 1px 2px 20px 3px #87aece;
+    }
+
+    .form4 label {
+      color: antiquewhite;
+      text-shadow: 2px 2px 2px black;
+    }
+
+    .form4 input[type="text"] {
+      width: 50%;
+      box-sizing: border-box;
+      display: block;
+      padding: 15px 30px;
+      margin: 10px 0px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      background-color: #eaeded;
+      transition: width 0.5s ease-in-out;
+    }
+    .form4 input[type="text"]:focus {
+      background-color: #bbc4ac;
+      box-shadow: 1px 1px 10px 1px #87aece;
+      width: 70%;
+    }
+
+    .form4 input[type="button"] {
+      width: 100%;
+      border: None;
+      border-radius: 30px;
+      padding: 15px 30px;
+      margin: 30px 0px;
+      background-color: steelblue;
+      color: white;
+      cursor: pointer;
+      font-size: 19px;
+      font-family: times;
+    }
+    .form4 input[type="button"]:hover {
+      background-color: #6b9bc3;
+    }
+
+    .form4 select {
+      width: 50%;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      background-color: #eaeded;
+      transition: width 0.5s ease-in-out;
+    }
+    .form4 select:focus {
+      width: 70%;
+      background-color: #d5dcdc;
+      box-shadow: 1px 1px 10px 1px #87aece;
+    }
+
+  </style>
+</head>
+
+<body>
+  <hr size="3" noshade>
+
+  <div class="mbar">
+    <ul class="bar">
+      <li><a id="h" href="#">Home</a></li>
+      <li><a href="html.html" target="_blank">HTML</a></li>
+      <li class="dropdown">
+        <a href="#">CSS</a>
+        <div class="droplinks">
+          <a href="index.html">Part 1</a>
+          <a href="CSS Part2.html">Part 2</a>
+          <a href="CSS Part3.html">Part 3</a>
+          <a id="p4" href="CSS part4.html">Part 4</a>
+        </div>
+      </li>
+      <li class="ang">
+        <a href="#">Angela</a>
+        <div class="anglink">
+          <a href="angela.html" target="_blank">Homepage</a>
+          <a href="Contact me.html" target="_blank">Contact</a>
+          <a id="a3" href="About me.html" target="_blank">About</a>
+        </div>
+      </li>
+      <li style="float: right;"class="adv">
+        <a href="#">Advanced</a>
+        <div class="advlink">
+          <a href="Advanced 1.html">Part 1</a>
+          <a id="adv3"href="Advanced 2.html">Part 2</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <h1>CSS Align<br><span style="font-size: 25px;">(different ways to align a text or div)</span></h1>
+
+  <ol>
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">Margin Auto:</li>
+    <p id="s">Use the <strong>"margin:auto" property</strong> to align an entire
+      <strong>"div"</strong> in the center of the page. <br>
+      <em><strong>(Make sure you specify the width of the element)</strong> for it to work.</em> <br>For example:
+    </p>
+    <div style="margin: auto;width: 50%;border: 4px outset darkgreen;padding: 30px;">
+      This is a div element aligned in the middle
+    </div>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">Text align: center</li>
+    <p id="s">To align a text in the center</p>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">Align an image (margin-left/right)</li>
+    <p id="s">You can use the <strong>margin-left/margin-right</strong>
+      elements to align an image the way you want. <br>For example:</p>
+    <img src="https://images.pexels.com/photos/7139722/pexels-photo-7139722.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="kids" width="35%" style="margin-left: 400px;opacity: 0.8;">
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">Align using position:relative</li>
+    <p>Use the <strong>position:relative</strong> and the <strong>top/bottom/left/right</strong>
+      properties to position an element.</p>
+    <div style="border: 3px outset darkgreen;padding: 30px;width: 45%;position: relative;left: 300px;">
+      An element aligned using <em>position:relative</em>
+    </div>
+    <p>The advantage of using <strong>relative</strong> instead of
+      <strong>absolute</strong> is that the following text doesn't
+    </p>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">Align with float</li>
+    <p id="s">You can also align a <strong>div</strong> using float</p>
+    <div style="border: 3px outset darkgreen;padding: 30px;width: 45%;float: right;">
+      This is a div element with <strong>float:right.</strong>
+    </div>
+    <p style="clear: right;">Any text you add after a <strong>floated element</strong> will appear at its side.
+      Use the <strong>clearfix hack</strong> to make the following text go under the floated element.</p>
+  </ol>
+
+  <hr size="3" noshade>
+
+  <h1>Pseudo Elements</h1>
+
+  <div id="s">A <strong>CSS pseudo-element</strong> is used to style specified parts of an element. <br>
+    For example, it can be used to:
+    <ul>
+      <li>Style the first letter, or line, of an element</li>
+      <li>Insert content before, or after, the content of an element</li>
+    </ul>
+  </div>
+
+  <h2>Examples of pseudo-elements</h2>
+
+  <ol>
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">Hover/link/visited/active (For links)</li>
+    <ul id="s">
+      <li><strong>Hover:</strong> Mouse over link</li>
+      <li><strong>Link:</strong> For an unvisited link</li>
+      <li><strong>Visited:</strong> For a link that has already been visited</li>
+      <li><strong>Active:</strong> Determine what happens <strong>on-click.</strong><em> (try clicking the link below)</em></li>
+    </ul>
+    For example:
+    <div class="pseudo-links">
+      <a href="#hover">Mouse over me</a>
+    </div><br>
+
+    <ul>
+      <li style="color: maroon;font-weight: bold;font-size: 25px;text-decoration: underline;">Hover Tooltip</li>
+    </ul>
+    <div class="tooltip">Hover over me to show the tooltip
+      <p>This is the tooltip</p>
+    </div>
+    <div id="s"><strong><ins>Explanation:</ins></strong> The <strong>"p"</strong>
+      is a tooltip for the <strong>"div"</strong>.
+      <ul>
+        <li>We use the <strong>"display:none"</strong> property to hide the "p"</li>
+        <li>Then, we create a <strong>div: hover p</strong>
+          which means that when <strong>we hover over the "div", it shows us the "p"</strong></li>
+        <li>Under <strong>div: hover p</strong> we add the <strong>display:block</strong> property.</li>
+      </ul>
+    </div>
+
+    <p style="color: maroon;font-weight: bold;font-size: 25px;text-decoration: underline;">More example of hover tooltip</p>
+    <div class="tooltip2" id="s">
+      Personal Information
+      <form class="" action="CSS Part3.html" method="post">
+        <label for="fname">First name:</label>
+        <input type="text" name="fname" placeholder="e.g John"><br>
+
+        <label for="lname">Last name:</label>
+        <input type="text" name="lname" placeholder="e.g Paul"><br>
+        <input type="button" name="" value="Submit">
+      </form>
+    </div><br>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">The ::first-line pseudo-element</li>
+    <p id="s">The <strong>::first-line pseudo-element</strong> is used to add a special style to the first line of a text.<br>
+      The following example formats the first line of the text in all <strong>"p" elements:</strong></p>
+
+    <div id="s" class="firstline">
+      <p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text.
+        Some more text. And even more, and more, and more, and more, and more,
+        and more, and more, and more, and more, and more, and more, and more.</p>
+    </div>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">The ::first-letter pseudo-element</li>
+    <p id="s">The <strong>::first-letter pseudo-element</strong> is used to add
+      a special style to the first letter of a text/paragraph.</p>
+
+    <div class="firstletter" id="s">
+      <p>You can use the ::first-letter pseudo-element to add a
+        special effect to the first character of a text!</p>
+    </div>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">Combining First-letter and First-line</li>
+    <div class="combine" id="s">
+      <p>You can combine the ::first-letter and ::first-line pseudo-elements
+        to add a special effect to the first letter and the first line of a text!</p>
+    </div>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">The ::before Pseudo-element</li>
+    <p id="s">The <strong>::before pseudo-element</strong> can be used to insert
+      some content before the content of an element.
+      The following example inserts an image before the content of each paragraph.</p>
+
+    <div class="before" id="s">
+      <p>This is a paragraph</p>
+      <p>This is another paragraph</p>
+    </div>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">The ::after Pseudo-element</li>
+    <p id="s">The <strong>::after pseudo-element</strong> can be used to insert some
+      content <strong>after the content of an element.</strong>
+      The following example inserts an image after the content of each paragraph:</p>
+
+    <div class="after" id="s">
+      <p>This is a paragraph</p>
+      <p>This is a paragraph</p>
+    </div><br>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">The ::marker Pseudo-element (for lists)</li>
+    <p id="s">The <strong>::marker</strong> is used to style the <strong>bullet points of lists.</strong><em>(see example)</em></p>
+    <div id="s" class="marker">
+      <ul style="list-style-type: square;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+        <li>Honey</li>
+      </ul>
+      <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+        <li>Honey</li>
+      </ol>
+    </div>
+
+    <li style="color: maroon;font-weight: bold;font-size: 25px;">The ::selection Pseudo element (for highlight)</li>
+    <p id="s">It is used to style the way a text appears when highlighted. <em>(try highlighting/selecting the example)</em></p>
+    <div id="s" class="selection">
+      <p>This is a paragraph for you to highlight.</p>
+      <p>This is another paragraph.</p>
+    </div>
+  </ol>
+
+  <hr size="3" noshade>
+
+  <h1>CSS opacity</h1>
+  <p id="s">A reminder of opacity and how we can use the <strong>hover property</strong>
+    with opacity on images and other elements. <em>(hover over the following examples)</em></p>
+
+  <div class="opacity-hover">
+    <a href="https://images.pexels.com/photos/5716415/pexels-photo-5716415.jpeg?cs=srgb&dl=pexels-lisa-5716415.jpg&fm=jpg" target="_blank">
+      <img src="https://images.pexels.com/photos/5716415/pexels-photo-5716415.jpeg?cs=srgb&dl=pexels-lisa-5716415.jpg&fm=jpg" alt="cute" width="250px">
+    </a>
+    <a href="https://images.pexels.com/photos/3179012/pexels-photo-3179012.jpeg?cs=srgb&dl=pexels-andrew-neel-3179012.jpg&fm=jpg" target="_blank">
+      <img src="https://images.pexels.com/photos/3179012/pexels-photo-3179012.jpeg?cs=srgb&dl=pexels-andrew-neel-3179012.jpg&fm=jpg" alt="cute" width="250px">
+    </a>
+    <a href="https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?cs=srgb&dl=pexels-kaique-rocha-775201.jpg&fm=jpg" target="_blank">
+      <img src="https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?cs=srgb&dl=pexels-kaique-rocha-775201.jpg&fm=jpg" alt="cute" width="250px">
+    </a>
+  </div>
+
+  <hr size="3" noshade>
+
+  <h1>CSS Vertical Navigation Bar</h1>
+
+  <ul class="nav">
+    <li><a id="home" href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+
+  <h3>Fixed vertical navigation bar</h3>
+
+  <p id="s" style="font-style: italic;">Check the code of the iframe</p>
+  <iframe src="vertical navigation bar.html" width="800" height="800" name="link" title="link"></iframe>
+
+  <hr size="3" noshade>
+
+  <h1>CSS Dropdowns</h1>
+
+  <h3 style="text-align: left;">Basic dropdown</h3>
+  <p id="s">Just like the <strong>dropdown tooltip</strong> we created before...</p>
+
+  <div class="drop">
+    <span style="background-color: rosybrown;padding: 20px;font-weight: bold;;">Hover over me</span>
+    <p>The dropdown</p>
+  </div><br><br>
+
+  <h3>Some basic rules for a proper dropdown</h3>
+
+  <div id="s">
+    <ul>
+      <li><strong>The position:</strong> The <strong>position of the container</strong>
+        should always be <strong><em>"relative"</em></strong> and the <strong>position of
+          the dropdown</strong> should be <strong><em>"absolute"</em></strong>.</li>
+      <li><strong>The display:</strong> The <strong>display of the container</strong>
+        should always be <strong><em>"inline-block"</em></strong>
+        <em>(this automatically reduces the width of the container, so you won't need to manually set the width.
+          Try removing this from the code to see what happens)</em>
+        and the <strong>display of the dropdown</strong> should be <strong><em>"none"</em></strong>.
+        The <strong>display of the hover</strong> should be <strong><em>"block"</em></strong>
+      </li>
+      <li>Add a <strong>box-shadow</strong> to the dropdown to make it more realistic.</li>
+    </ul>
+  </div>
+
+  <h2>Dropdown Menu</h2>
+  <p id="s"><strong>Note:</strong><em> We will use the <strong>button tag (button)</strong>
+      for the dropdown button instead of the <strong>link tag (a)</strong></em></p>
+
+  <div class="dd">
+    <button type="bt" name="bt">Dropdown</button>
+    <div class="dl">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div><br><br><br><br>
+
+  <h2>Dropdown in the navigation bar</h2>
+
+  <div id="s">Adding a dropdown menu in a navigation bar require extra properties:
+    <ol>
+      <li>Start by creating a normal navigation bar with links(home, news etc)</li>
+      <li>Then, select the link you'll like to add a dropdown to and add the corresponding dropdown links and class.</li>
+      <li>Unlike regular dropdowns, navigation dropdowns <strong>don't have a relative position.</strong></li>
+      <li>The <strong>links of a navigation dropdown</strong> should have a <strong><em>"z-index: 1"</em></strong></li>
+    </ol>
+  </div>
+
+  <h2>Dropdown Image</h2>
+  <div class="dropimage">
+    <img src="https://images.pexels.com/photos/2417578/pexels-photo-2417578.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="toy" width="150">
+    <div class="imglink">
+      <img src="https://images.pexels.com/photos/8544502/pexels-photo-8544502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="kids" width="250">
+      <div class="desc">
+        Cute kids
+      </div>
+    </div>
+  </div><br><br><br><br>
+
+  <hr size="3" noshade>
+
+  <h2>Creating an image gallery</h2>
+
+  <div class="gallery">
+    <a href="https://images.pexels.com/photos/2756113/pexels-photo-2756113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <img src="https://images.pexels.com/photos/2756113/pexels-photo-2756113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="cool" width="300"></a>
+    <div class="des">
+      Add Description
+    </div>
+  </div>
+
+  <div class="gallery">
+    <a href="https://images.pexels.com/photos/876343/pexels-photo-876343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <img src="https://images.pexels.com/photos/876343/pexels-photo-876343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="two" width="300"></a>
+    <div class="des">
+      Add Description
+    </div>
+  </div>
+
+  <div class="gallery">
+    <a href="https://images.pexels.com/photos/163467/war-desert-guns-gunshow-163467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <img src="https://images.pexels.com/photos/163467/war-desert-guns-gunshow-163467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="silent" width="300"></a>
+    <div class="des">
+      Add Description
+    </div>
+  </div>
+
+  <div class="gallery">
+    <a href="https://images.pexels.com/photos/163443/war-desert-guns-gunshow-163443.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <img src="https://images.pexels.com/photos/163443/war-desert-guns-gunshow-163443.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="afghan" width="300"></a>
+    <div class="des">
+      Add Description
+    </div>
+  </div><br><br><br>
+
+  <hr size="3" noshade style="clear: both;">
+
+  <h1>CSS Forms</h1>
+
+  <h3 style="text-align: left;">CSS <em>[attribute="value"] </em>selector</h3>
+
+  <p id="s">The <strong>[attribute="value"]</strong> is used to select elements with a specific attribute. <br>
+    For example: If you want to select <strong>"a" or link <em>elements</em></strong>
+    which have the <strong>"target:_blank" <em>attribute</em></strong>, you'll write: <br>
+    <strong><em>a[target=_blank]</em></strong> <br>
+  </p>
+  <p id="s">We are going to use it for <strong>forms</strong> this way:
+    <strong><em>input[type=text]</em></strong> or <strong><em>input[type=button]</em></strong>
+  </p>
+
+  <h3>Styling Input fields</h3>
+
+  <div id="s">
+    There are several types of inputs we studied in HTML but what style are:
+    <ul>
+      <li>Text</li>
+      <li>Button</li>
+      <li>Textarea</li>
+      <em>and others...</em>
+    </ul>
+    We'll use the following to style them:
+    <ul>
+      <li><strong>Width (in %)</strong></li>
+      <li><strong>Padding</strong></li>
+      <li><strong>Margin</strong></li>
+      <li><strong>Border and border-radius</strong></li>
+      <li><strong>Box-shadow</strong></li>
+      <li><strong>Text color</strong></li>
+      <li><strong>Box-sizing</strong></li>
+      <li>We'll style the <strong>div</strong> as well.</li>
+    </ul>
+    <em><strong>Note:</strong> It is advisable to use the <strong>box-sizing property</strong>
+      and the <strong>display:block property</strong> when styling inputs like text, button etc</em>
+  </div><br><br>
+
+  <div class="eg1">
+    <form class="form1" action="CSS Part3.html" method="post">
+      <label for="fname">First Name:</label><br>
+      <input type="text" name="fname" placeholder="Your name...">
+      <label for="lname">Last Name:</label><br>
+      <input type="text" name="lname" placeholder="Your last name...">
+    </form>
+  </div><br>
+
+  <h3>Focused and Animated inputs</h3>
+
+  <div id="s">
+    <ul>
+      <li>You can style the way an input will look like when it gets
+        <strong>focus (clicked on)</strong> by adding a <strong>":focus" attribute</strong>
+        after the selector in CSS, this way;<br> <strong>e.g input[type="text"]<em>:focus</em></strong>
+      </li>
+      <li>You can also style the <strong>label</strong>. <em>see CSS code</em></li>
+      <li>By default, some browsers will add an <strong>outline</strong>
+        around the <strong>input</strong> when it gets <strong>focus (clicked on)</strong> <em>
+          (try clicking the example above to see what I'm talking about)</em>.
+        You can remove this behavior by adding <strong>outline: none;</strong> to the input.</li>
+      <li>Notice that when you click on the <strong>input</strong>, its <strong>width</strong> changes.
+        That's thanks to the <strong>:focus attribute</strong>.
+        Now, you can add some <strong>effects to the transition</strong> between one width to another using the <strong>transition tag</strong>.<br>
+        (<em>we'll study transitions in <strong>advanced chapters</strong></em>)</li>
+      <li>You can also <strong>style the placeholder</strong>
+        using the following property; <strong>::placeholder</strong> in CSS.</li>
+    </ul>
+  </div><br>
+
+  <div class="">
+    <p id="s">An example with a styled <strong>:focus</strong> and <strong>outline:none</strong></p>
+    <div class="eg2">
+      <span style="color: black;font-weight: bold;"><em>(Try clicking on the input)</em></span>
+      <form class="form2" action="CSS Part3.html" method="post">
+        <label for="fname">First Name:</label><br>
+        <input type="text" name="fname" placeholder="Your name...">
+        <label for="lname">Last Name:</label><br>
+        <input type="text" name="lname" placeholder="Your last name...">
+      </form>
+    </div>
+  </div>
+
+  <h3>Styling <em>"select"</em> menus</h3>
+
+  <div class="eg3">
+    <form class="form3" action="CSS Part3.html" method="post">
+      <label for="country">Country:</label><br>
+      <select class="" name="Country">
+        <option value="Cmr">Cameroon</option>
+        <option value="Nig">Nigeria</option>
+        <option value="Fra" selected>France</option>
+        <option value="Ger">Germany</option>
+      </select>
+    </form>
+  </div><br>
+
+  <h3>Summary</h3>
+
+  <div class="eg4">
+    <form class="form4" action="CSS Part3.html" method="post">
+      <label for="fname">First Name</label><br>
+      <input type="text" name="fname" placeholder="Your name...">
+
+      <label for="lname">Last Name</label><br>
+      <input type="text" name="lname" placeholder="Your last name...">
+
+      <label for="country">Country</label><br>
+      <select class="" name="country">
+        <option value="Cmr">Cameroon</option>
+        <option value="Nig">Nigeria</option>
+        <option value="Fra" selected>France</option>
+        <option value="Ger">Germany</option>
+      </select><br>
+
+      <input type="button" name="submit" value="Submit">
+    </form>
+  </div>
+
+
+
+  <br><br>
+  <img id="fixed-img" src="https://live.staticflickr.com/65535/51379942339_cc5b2170d5_o.png" alt="laurel">
+  <div id="sticky">
+    <a href="https://www.instagram.com/laurel_nk/" target="_blank" title="Instagram">CSS Lessons By: Laurel</a>
+  </div>
+</body>
+
+</html>

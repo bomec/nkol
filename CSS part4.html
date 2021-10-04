@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>🤪CSS Part 4</title>
+  <link href="https://fonts.googleapis.com/css?family=Palette+Mosaic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bahianita&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sofia&display=swap&effect=fire|neon|outline|emboss|shadow-multiple" rel="stylesheet">
+  <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+    .mbar {
+      /*For the navigation bar as a whole*/
+      position: sticky;
+      z-index: 1;
+      opacity: 0.4;
+      top: 0;
+    }
+
+    .mbar:hover {
+      opacity: 1;
+    }
+
+    .bar {
+      /* for main links of the navigation bar (home/html/css etc)*/
+      list-style-type: none;
+      background-color: black;
+      overflow: auto;
+      padding: 0;
+      margin: 0;
+      border: 1px solid black;
+      border-radius: 100px;
+    }
+
+    .bar li {
+      float: left;
+    }
+
+    .bar a {
+      color: antiquewhite;
+      text-decoration: none;
+      display: inline-block;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .bar a:hover {
+      background-color: #191919;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      /*For the CSS dropdown */
+      display: inline-block;
+    }
+
+    .droplinks {
+      display: none;
+      background-color: gainsboro;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+    }
+
+    .droplinks:hover {
+      opacity: 0.8;
+    }
+
+    #p4 {
+      border: none;
+    }
+
+    #p4:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .droplinks a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 10px 20px;
+      border-bottom: 1px solid silver;
+    }
+
+    .droplinks a:hover {
+      background-color: darkgrey;
+    }
+
+    .dropdown:hover .droplinks {
+      display: block;
+    }
+
+    #h {
+      background-color: darkslategrey;
+    }
+
+
+
+    .ang {
+      /* for the angela dropdown*/
+      display: inline-block;
+    }
+
+    .anglink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    .anglink:hover {
+      opacity: 0.8;
+    }
+
+    #a3 {
+      border: none;
+    }
+
+    #a3:hover {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .anglink a {
+      display: block;
+      padding: 10px 20px;
+      color: black;
+      border-bottom: 1px solid silver;
+    }
+
+    .anglink a:hover {
+      background-color: darkgrey;
+    }
+
+    .ang:hover .anglink {
+      display: block;
+    }
+
+
+
+    .adv {
+      display: inline-block;
+    }
+    .advlink {
+      display: none;
+      position: absolute;
+      background-color: gainsboro;
+      opacity: 0.4;
+      box-shadow: 2px 6px 10px 2px darkgrey;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .advlink:hover {
+      opacity: 0.8;
+    }
+    .advlink a {
+      display: block;
+      color: black;
+    }
+    .advlink a:hover {
+      background-color: darkgrey;
+    }
+
+    #adv3 {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    .adv:hover .advlink {
+      display: block;
+    }
+
+
+
+
+
+
+
+
+    #s {
+      background-color: lightgray;
+      opacity: 0.8;
+      border-radius: 8px;
+      border-left: groove 4px saddlebrown;
+      padding: 10px;
+      width: 70%;
+    }
+
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-decoration: underline;
+      text-align: center;
+      color: maroon;
+    }
+
+    body {
+      margin: 0 70px;
+      padding: 20px;
+      font-size: 120%;
+      background-image: url(https://images.pexels.com/photos/4226873/pexels-photo-4226873.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4226873.jpg&fm=jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
+      background-attachment: fixed;
+      text-align: justify;
+      line-height: 1.8;
+      word-spacing: 3px;
+      font-family: times, georgia, garamond serif;
+      counter-reset: section;
+    }
+
+    h1 {
+      /*These are counters. Check the lessons on CSS counters*/
+      counter-reset: subsection;
+    }
+
+    h1::before {
+      counter-increment: section;
+      content: "Section "counter(section) ". ";
+    }
+
+    h2::before {
+      counter-increment: subsection;
+      content: counter(section) "."counter(subsection) " ";
+    }
+
+    h3::before {
+      counter-increment: subsection;
+      content: counter(section) "."counter(subsection) ". ";
+    }
+
+    #nosection::before {
+      counter-increment: none;
+      content: none;
+    }
+
+
+
+
+
+
+    strong {
+      color: darkred;
+    }
+
+
+    #fixed-img {
+      /*For my FIXED picture at the bottom right */
+      width: 15%;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+
+    #sticky {
+      /* FOR THE STICKY BAR AT THE BOTTOM (CSS lessons by: laurel)*/
+      position: sticky;
+      bottom: 0;
+      text-align: center;
+      opacity: 0.4;
+      font-family: monoton;
+      font-size: 30px;
+      clear: both;
+    }
+
+    #sticky a {
+      text-decoration: none;
+      color: black;
+    }
+
+    #sticky:hover {
+      opacity: 1;
+      text-shadow: 3px 3px 3px rebeccapurple;
+      font-size: 33px;
+    }
+
+
+
+
+
+
+    @media screen and (min-width:1000px) {
+
+      /* This means that when the screen is more than 1000px, the size of the layout will reduce to 70%
+      (try removing this and resizing the browser).
+      We put this so that the layout doesn't over-stretch when we put the browser on full screen.*/
+      .sample {
+        width: 70%;
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+
+      /* This means that when the screen is less than 1100px, the size of the layout will increase to 100%*/
+      .sample {
+        width: 100%;
+      }
+    }
+
+    .sample {
+      background-color: linen;
+      opacity: 0.8;
+      padding: 5px 22px;
+      box-shadow: 1px 1px 10px 1px black;
+    }
+
+    .head {
+      background-color: darkslategrey;
+      box-shadow: 1px 1px 10px 1px black;
+    }
+
+    .head h1 {
+      text-decoration: none;
+      color: antiquewhite;
+      padding: 20px;
+    }
+
+    .navig {
+      background-color: darkslategrey;
+      box-shadow: 1px 1px 10px 1px black;
+    }
+
+    .navig h2 {
+      text-decoration: none;
+      color: antiquewhite;
+      padding: 10px;
+    }
+
+    .body div {
+      /* Used to make the columns float side by side. But we don't add padding to the DIV. We add it
+    to the elements inside the DIV. The DIV columns touch each other. Try adding a background color to see...*/
+      overflow: auto;
+      float: left;
+    }
+
+    .body p {
+      /* Notice we used a(margin:0px) to remove the margin between the "div" and the "p".
+    We also used this to style all the "p" in the .body */
+      height: 300px;
+      margin: 0px;
+      text-align: center;
+      padding-top: 120px;
+      background-color: darkslategrey;
+      color: antiquewhite;
+      box-shadow: 1px 1px 10px 1px black;
+    }
+
+    .left {
+      width: 15%;
+    }
+
+    .left p {
+      /*Used to create space between the columns*/
+      margin-right: 20px;
+    }
+
+    .middle {
+      width: 70%;
+    }
+
+    .right {
+      width: 15%;
+    }
+
+    .right p {
+      /*Used to create space between the columns*/
+      margin-left: 20px;
+    }
+
+    .body::after {
+      /*Used to make sure the "footer" doesn't overlap the "body"*/
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+    .foot {
+      background-color: darkslategrey;
+      box-shadow: 1px 1px 10px 1px black;
+    }
+
+    .foot h1 {
+      color: antiquewhite;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+
+
+
+
+    @media screen and (max-width:1000px) {
+
+      /*This makes the columns stack-up on each other when we reduce the size of the browser*/
+      .body1 .column1 {
+        width: 100%;
+      }
+    }
+
+    .equal {
+      opacity: 0.9;
+    }
+
+    .head1 {
+      background-color: darkslategrey;
+      padding: 20px;
+    }
+
+    .head1 h1 {
+      text-decoration: none;
+      color: tan;
+    }
+
+    .head1 p {
+      color: white;
+      text-align: center;
+      margin-top: -10px;
+    }
+
+    .nav1 {
+      background-color: tan;
+      overflow: auto;
+    }
+
+    .nav1 a {
+      text-decoration: none;
+      text-align: center;
+      color: black;
+      padding: 10px 20px;
+      float: left;
+    }
+
+    .nav1 a:hover {
+      background-color: darkslategrey;
+      color: tan;
+    }
+
+    .column1 {
+      width: 33.33%;
+      float: left;
+      background-color: darkslategrey;
+      padding: 0px 20px;
+      display: block;
+    }
+
+    .column1 h2 {
+      color: antiquewhite;
+      text-decoration-style: wavy;
+      text-align: left;
+    }
+
+    .column1 p {
+      color: tan;
+      text-shadow: 2px 2px 2px black;
+    }
+
+    .body1::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+
+
+
+
+
+
+
+    @media screen and (max-width: 1000px) {
+
+      /* This is to make the columns stack-up on each other when we reduce the size of the browser*/
+      .body2 .column2,
+      .body2 .side {
+        width: 100%;
+      }
+    }
+
+    .unequal {
+      opacity: 0.9;
+    }
+
+    .head2 {
+      background-color: black;
+      padding: 10px;
+    }
+
+    .head2 h1 {
+      color: sienna;
+      text-decoration: none;
+    }
+
+    .head2 p {
+      color: antiquewhite;
+      text-align: center;
+    }
+
+    .nav2 {
+      background-color: sienna;
+      overflow: auto;
+    }
+
+    .nav2 a {
+      color: black;
+      text-decoration: none;
+      padding: 10px;
+      float: left;
+    }
+
+    .nav2 a:hover {
+      background-color: black;
+      color: antiquewhite;
+    }
+
+    .body2 {
+      background-color: black;
+    }
+
+    .column2 {
+      float: left;
+      width: 60%;
+      color: antiquewhite;
+      padding: 0px 20px;
+    }
+
+    .column2 h2 {
+      color: sienna;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    .side {
+      float: left;
+      width: 20%;
+      color: antiquewhite;
+      padding: 0px 20px;
+    }
+
+    .side h2 {
+      color: sienna;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    .body2::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+
+
+
+
+
+
+
+    @media screen and (max-width: 1000px) {
+
+      .body3 .leftcolumn,
+      .body3 .rightcolumn {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .nav3 a {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    .full {
+      opacity: 0.9;
+      background-color: white;
+      padding-bottom: 20px;
+      border: 3px ridge #330000;
+      border-radius: 20px;
+    }
+
+    .head3 {
+      background-color: white;
+    }
+
+    .head3 h1 {
+      font-size: 40px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .head3 p {
+      text-align: center;
+      font-weight: bold;
+      color: #330000;
+    }
+
+    .nav3 {
+      background-color: #330000;
+      overflow: auto;
+    }
+
+    .nav3 a {
+      float: left;
+      text-decoration: none;
+      color: antiquewhite;
+      padding: 15px 15px;
+    }
+
+    .nav3 a:hover {
+      background-color: #4d0000;
+      color: antiquewhite;
+    }
+
+    .body3 {
+      padding-bottom: 20px;
+    }
+
+    .leftcolumn {
+      float: left;
+      width: 75%;
+      background-color: white;
+      padding: 0px 20px;
+    }
+
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      background-color: white;
+    }
+
+    .cardl {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+      border: 3px ridge #330000;
+    }
+
+    .cardl .fakeimg {
+      color: antiquewhite;
+      background-color: #330000;
+      padding: 10px 30px;
+    }
+
+    .cardr {
+      background-color: #330000;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .cardr h2,
+    .cardr h3,
+    .cardr p {
+      color: antiquewhite;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    .cardr .fakeimg {
+      color: #330000;
+      background-color: white;
+      padding: 10px 30px;
+    }
+
+    .body3::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .foot3 {
+      border: 3px ridge #330000;
+      margin: 0px 20px;
+    }
+
+    .foot3 h1 {
+      text-decoration: none;
+      color: #330000;
+    }
+
+
+
+
+    .more {
+      text-align: center;
+    }
+    .more a {
+      text-decoration: none;
+      color: saddlebrown;
+      background-color: black;
+      padding: 20px 40px;
+      font-size: 30px;
+      font-family: monoton;
+      border-radius: 50px;
+      border: 3px outset saddlebrown;
+    }
+    .more a:hover {
+      color: saddlebrown;
+      font-size: 32px;
+    }
+    .more a:active {
+      color: black;
+      background: saddlebrown;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <hr size="3" noshade>
+
+  <div class="mbar">
+    <ul class="bar">
+      <li><a id="h" href="#">Home</a></li>
+      <li><a href="html.html" target="_blank">HTML</a></li>
+      <li class="dropdown">
+        <a href="#">CSS</a>
+        <div class="droplinks">
+          <a href="index.html">Part 1</a>
+          <a href="CSS Part2.html">Part 2</a>
+          <a href="CSS Part3.html">Part 3</a>
+          <a id="p4" href="CSS part4.html">Part 4</a>
+        </div>
+      </li>
+      <li class="ang">
+        <a href="#">Angela</a>
+        <div class="anglink">
+          <a href="angela.html" target="_blank">Homepage</a>
+          <a href="Contact me.html" target="_blank">Contact</a>
+          <a id="a3" href="About me.html" target="_blank">About</a>
+        </div>
+      </li>
+      <li style="float: right;"class="adv">
+        <a href="#">Advanced</a>
+        <div class="advlink">
+          <a href="Advanced 1.html">Part 1</a>
+          <a id="adv3"href="Advanced 2.html">Part 2</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <h1>CSS Weblayout</h1>
+
+  <p id="s">We'll study a bit of <strong>media queries</strong> in this chapter too.
+    Media queries <em>affect the size of an element when the browser is resized.</em></p>
+  <div id="s">
+    <h2 id="nosection">Very important note</h2>
+    <p>Always add the <strong>"* { box-sizing: border-box;}"</strong> property
+      at the top of CSS before even starting to code. It helps to automatically group
+    layouts and table together.</p>
+    <p>For example: notice that in the layouts below <strong>the left, middle and right content</strong>
+    align side by side without breaking the flow despite the fact that there is
+    <strong>space (padding)</strong> between them. This is thanks to the <strong>border-box.</strong></p>
+  </div>
+
+  <div class="sample">
+    <div class="head">
+      <h1 id="nosection">Header</h1>
+    </div>
+    <div class="navig">
+      <h2 id="nosection">Navigation Menu</h2>
+    </div>
+    <div class="body">
+      <div class="left">
+        <p>Left content</p>
+      </div>
+      <div class="middle">
+        <p>Middle content</p>
+      </div>
+      <div class="right">
+        <p>Right content</p>
+      </div>
+    </div>
+    <div class="foot">
+      <h1 id="nosection">Footer</h1>
+    </div>
+  </div>
+  <p id="s">There are tons of different layout designs to choose from.
+    However, the structure above, is one of the most common, and we will take a closer look at it</p><br>
+
+  <h2>A 3-column layout</h2>
+
+  <div class="equal">
+    <div class="head1">
+      <h1 id="nosection">Header</h1>
+      <p>Resize the browser window to see the responsiveness effect.</p>
+    </div>
+    <div class="nav1">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    <div class="body1">
+      <div class="column1">
+        <h2 id="nosection">Column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
+          eget elementum magna tristique. Quisque vehicula,
+          risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+          Praesent scelerisque tortor sed accumsan convallis.</p>
+      </div>
+      <div class="column1">
+        <h2 id="nosection">Column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
+          eget elementum magna tristique. Quisque vehicula,
+          risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+          Praesent scelerisque tortor sed accumsan convallis.</p>
+      </div>
+      <div class="column1">
+        <h2 id="nosection">Column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
+          eget elementum magna tristique. Quisque vehicula,
+          risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+          Praesent scelerisque tortor sed accumsan convallis.</p>
+      </div>
+    </div>
+  </div><br><br>
+
+  <h2>Unequal column layout</h2>
+
+  <div class="unequal">
+    <div class="head2">
+      <h1 id="nosection">Header</h1>
+      <p>Resize the browser window to see the responsiveness effect.</p>
+    </div>
+    <div class="nav2">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    <div class="body2">
+      <div class="side">
+        <h2 id="nosection">Side</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="column2">
+        <h2 id="nosection">Column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
+          eget elementum magna tristique. Quisque vehicula,
+          risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+          Praesent scelerisque tortor sed accumsan convallis.</p>
+      </div>
+      <div class="side">
+        <h2 id="nosection">Side</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div><br>
+
+
+  <h2>A fully responsive website</h2>
+
+  <div class="full">
+    <div class="head3">
+      <h1 id="nosection">Website</h1>
+      <p>Resize the browser window to see the effect.</p>
+    </div>
+    <div class="nav3">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      <a href="#" style="float: right;">Link 4</a>
+    </div>
+    <div class="body3">
+      <div class="leftcolumn">
+        <div class="cardl">
+          <h2 id="nosection" style="color: #330000;text-align: left;text-decoration: none;">Title description</h2>
+          <h3 id="nosection" style="color: #330000;text-align: left;text-decoration: none;">Date: 3<sup>rd</sup> September 2021</h3>
+          <div class="fakeimg" style="height: 200px;">
+            Image
+          </div>
+          <p style="color: #330000;text-align: left;text-decoration: none;">Some text..<br>
+            Sunt in culpa qui officia deserunt mollit anim id est laborum
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="cardl">
+          <h2 id="nosection" style="color: #330000;text-align: left;text-decoration: none;">Title description</h2>
+          <h3 id="nosection" style="color: #330000;text-align: left;text-decoration: none;">Date: 3<sup>rd</sup> September 2021</h3>
+          <div class="fakeimg" style="height: 200px;">
+            Image
+          </div>
+          <p style="color: #330000;text-align: left;text-decoration: none;">Some text..<br>
+            Sunt in culpa qui officia deserunt mollit anim id est laborum
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="cardr">
+          <h3 id="nosection">About Me</h3>
+          <div class="fakeimg" style="height: 100px;">
+            Image
+          </div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+        </div>
+        <div class="cardr">
+          <h3 id="nosection">Popular Post</h3>
+          <div class="fakeimg" style="height: 100px;">Image</div>
+          <div class="fakeimg" style="height: 100px;">Image</div>
+          <div class="fakeimg" style="height: 100px;">Image</div>
+        </div>
+        <div class="cardr">
+          <h3 id="nosection">Follow Me</h3>
+          <p>Some text..</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot3">
+      <h1 id="nosection">Footer</h1>
+    </div>
+  </div><br><br><br>
+
+  <div class="more">
+    <a href="More Layouts.html"target="_blank">
+      More Web Layouts</a>
+  </div>
+
+
+
+
+
+  <br><br><br><br><br><br>
+  <img id="fixed-img" src="https://live.staticflickr.com/65535/51379942339_cc5b2170d5_o.png" alt="laurel">
+  <div id="sticky">
+    <a href="https://www.instagram.com/laurel_nk/" target="_blank" title="Instagram">CSS Lessons By: Laurel</a>
+  </div>
+</body>
+
+</html>
