@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<h2 lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width, initial scale=1”>
+    <title>😎Laurel's Personal Website</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: dimgrey;
+        padding: 10px;
+        text-align: center;
+        color: antiquewhite;
+        font-size: 30px;
+        font-family: cursive;
+      }
+
+      nav {
+        background-color: darkgrey;
+        float: left;
+        width: 30%;
+        height: 300px;
+        padding: 20px
+      }
+
+      #list {
+        list-style-type: lower-latin;
+        padding: 0;
+      }
+
+      article {
+        background-color: gainsboro;
+        float: left;
+        width: 70%;
+        height: 300px;
+      }
+
+      section ::after {
+        content: close-quote;
+        display: table;
+        clear: both;
+      }
+
+      footer {
+        background-color: dimgrey;
+        padding: 30px;
+        color: antiquewhite;
+        text-align: center;
+      }
+
+      @media (max-width:600px) {
+
+        nav,
+        article {
+          width: 10%;
+          height: auto;
+        }
+
+      }
+
+
+
+
+
+
+
+
+
+      a:link {
+        color: white;
+        background-color: firebrick;
+        padding: 15px 25px;
+        margin: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      a:visited {
+        color: antiquewhite;
+        background-color: firebrick;
+        padding: 15px 25px;
+        margin: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      a:hover {
+        background-color: crimson;
+        text-decoration: underline;
+      }
+
+
+
+
+
+
+
+
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      #t1 {
+        border-color: indigo;
+        width: 70%;
+        text-align: center;
+        border-collapse: separate;
+        border-style: dashed;
+      }
+
+      #t1 td {
+        border-style: dotted;
+        border-color: indigo;
+        padding: 10px;
+      }
+
+      #t1 th {
+        border-style: dashed;
+        border-color: indigo;
+        background-color: indigo;
+        color: white;
+        padding: 25px;
+        font-size: 20px;
+      }
+
+
+
+
+
+
+
+
+
+      #Navigation li {
+        float: left;
+        overflow: auto;
+      }
+
+      #Navigation li a {
+        background-color: black;
+        color: deepskyblue;
+        text-align: center;
+        padding: 20px;
+        margin: 0px;
+      }
+
+      #Navigation li a:hover {
+        background-color: #333333;
+        text-decoration: underline;
+      }
+
+      body {
+        background-color: beige;
+        border: 3px solid midnightblue;
+        border-style: double;
+      }
+
+      h1 {
+        color: black;
+        border: 3px solid palevioletred;
+      }
+    </style>
+  </head>
+
+  <body style="font-family:times;font-size:18px;">
+
+    <a href="#ALA">Jump to Additional link attributes</a>
+    <a href="#bookmark">Jump to bookmarks heading</a>
+    <a href="#Quotations">Jump to Quotation and citation</a>
+    <a href="#Image maps">Image map</a>
+
+    <hr size="3" noshade>
+
+    <h1 style="text-align:center;">USING BORDERS AND OTHER ATTRIBUTES</h1>
+    <p style="border:2px dotted darkred;
+  padding: 50px;
+  margin: 10px;">This is a paragraph with borders</p>
+    <p style="border:2px dashed darkred;
+  padding: 20px;
+  margin: 50px;">This is a paragraph with borders<+- /p>
+        <p style="border:1px solid darkred;
+  padding: 50px;
+  margin: 90px;">This is a paragraph with borders</p>
+
+        <h1 title="For images"> The img, src and alt attributes</h1>
+        <p>The img attributes are for images and don't require a closing tag. Several sub-attributes can be added to the image attributes such as:
+        <p>-The src attribute to indicate the source of the image.</p>
+        <p>-The width and height.</p>
+        <p>-And the alt attritbute to add any additional text to the image in case it doesn't display. </p>
+        <p></p>
+        <img src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" width="300" height="250" alt="coding with html" title="coding with html" style="border: 3px solid darkblue;">
+        <br><a href="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">Click to see source of the image</a>
+
+
+        <h1 style="text-align:center;">How to use image as a link</h1>
+        <a href="https://www.w3schools.com/html/html_links.asp" title="HTML tutorial" target="_blank"><img src="https://images.pexels.com/photos/4713866/pexels-photo-4713866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="HTML Tutorials"
+            Width="300" height="200"></a>
+
+
+        <h2 style="text-align:center"><ins>Creating GIFS</ins></h2>
+        <a href="https://media.giphy.com/media/26uf2dYBreLiLiK5O/giphy.gif" title="GIF of man having fun" target="_blank"><img src="https://media.giphy.com/media/26uf2dYBreLiLiK5O/giphy.gif" width="300" height="200" alt="Gif of man having fun"></p>
+    </a>
+
+    <h2 style="text-align:center"><ins>Creating a floating image</ins></h2>
+    <p><img src="https://media.giphy.com/media/xT1R9CMxCzahRPHYQ0/giphy.gif" alt="man dancing" style="float:right;width:80px;height:80px">We can make an image or a GIF appear to the left or the right of our text by using the <strong>STYLE
+        ATTRIBUTE</strong> and the
+      <strong>floating right</strong> element
+    </p>
+    <p><img src="https://media.giphy.com/media/PPA9qnHLXsd986KCy7/giphy.gif" alt="happy weekend" style="float:left;width:80px;height:80px">We can make an image or a GIF appear to the left or the right of our text by using the <strong>STYLE
+        ATTRIBUTE</strong> and the
+      <strong>floating right</strong> element
+    </p>
+
+    <h1>
+  <p>smo,os</p>
+    </h1>
+    <hr size="3" noshade>
+
+    <h1>To add the color to the text</h1>
+    <p>Use p then style attribute="color:red;", the text, followed by a closing for p. Forexample:
+    <p>
+    <h2 style="font-size:30px">
+      <p style="color:red;">This is what a colored text looks like</p>
+    </h2>
+    <p>
+    <h2>
+      <p style="color:green;">This is what a colored text looks like</p>
+    </h2>
+    <p>
+    <h2>
+      <p style="color:purple;">This is what a colored text looks like</p>
+    </h2>
+
+    <div style="font-size: 45px;padding:0px;margin:30px;">
+      <p1 style="color:mediumorchid;background-color: black;">This is what text with colored borders looks like</p1>
+    </div>
+
+    <hr size="3" noshade>
+
+    <h1 title="This is the header">ADDING A TOOLTIP</h1>
+    <p title="This is the tooltip">Pass the mouse over text to open a virtual dropdown text</p>
+
+    <hr size="3" noshade>
+
+    <h1 style="font-size:70px;"> Increasing the font size</h1>
+    <p>Using the Font-size attribute you can increase the font size of a headings
+    <p style="font-size:60px;"> This is an example with a simple paragraph</p>
+
+    <hr size="3" noshade>
+
+    <h1>The PRE Tag</h1>
+    <p1> Used to keep all the texts in the same way it is written in the html code. For example;
+      <pre>                        Les Roses sont rouges,
+                Les violettes sont verte,
+       Mon raffinement et moi,
+Ont t'emmerde.</pre>
+
+      <center>
+        <h2> Now let's spice it up a little bit</h2>
+      </center>
+
+      <pre style="color:purple;font-size: 40px;">                        Les Roses sont rouges,
+                Les violettes sont verte,
+       Mon raffinement et moi,
+Ont t'emmerde.</pre>
+
+
+      <hr size="3" noshade>
+      <center>
+        <p style="background-color:indigo;color:red;font-size:60px;font-family:times;">A summary of everything</p>
+      </center>
+
+      <hr size="3" noshade>
+
+      <h1 id="Formatting" style="text-align:center;"><b><ins>Formatting elements</ins></b></h1>
+      <p><strong>This text is bold</strong></p>
+      <p><em>This text is in italic</em></p>
+      <p>this text has <sub>subscript</sub> and also <sup>superscript</sup></p>
+      <p> This text has a <mark>mark (highlight)</mark></p>
+      <p><small>This text is smaller in size</small></p>
+      <p>This text has been <del>cancelled</del></p>
+      <p>This text has been <ins>underlined</ins></p>
+
+      <hr size="3" noshade>
+      <h1 id="Quotations">How to make a quotation and citation</h1>
+      <p>Here is a quote from the WWE website</p>
+      <blockquote cite="https://www.wwe.com/wwenetwork">WWE Network is an online video streaming service (just like Netflix & Hulu)* where you can watch all of WWE’s pay-per-view events at no additional cost plus thousands of hours of video on
+        demand.
+        All programming is viewable anywhere you’d like to watch — including TVs, game consoles, phones, tablets and computers.</blockquote>
+
+      <p><strong><ins>For short quotations, use the "q" tag</ins></strong></p>
+      <p>The WWE goal is to: <q>Provide safe and quality wrestling entertainement to the viewers.</q></p>
+
+      <p><strong><ins>For Abbreviations</ins></strong></p>
+      <p>The <abbr title="World Wrestling Entertainement">WWE</abbr> is the biggest wrestling faction in the world right now.</p>
+
+      <p><strong><ins>For addresses</ins></strong></p>
+      <p>To insert an address simply write:</p>
+      <p><address>Written by Nde Laurel.
+        <br>Visit me at:
+        <br>file:///C:/Users/user/Documents/programming/projects/HTML%20-%20Personal%20Site/index.html
+        <br>Zip:640101, American University of Nigeria
+        <br>Yola, Nigeria
+      </address></p>
+
+      <hr size="3" noshade>
+
+      <h2 style="text-align:center;" id="ALA"><ins>Additional link attributes</ins></h2>
+      <p>We already know href as the attribute for links. But we can add another attribute to the href attributes to influence how the link opens</p>
+      <a href="https://www.w3schools.com/html/html_colors.asp" title="Go to W3schools HTML colors" target="_blank">Visit W3schools HTML colors</a>
+      <p>When the target="_blank" attribute, the link will open on a new window or tab.</p>
+
+      <p style="text-align:center;"><ins><strong>Link to an email address</strong></ins></p>
+      <p>To add a link which will open the user’s email app when clicked on,<br>use <strong>(a href= “mailto:someone@example.com" Send email to this address)</strong>. <br>When the user clicks on the link, it will redirect him to his default email
+        app
+        or program for him to send a new email to the email address you specified. (see example in HTML)</p>
+      <p>For example:</p>
+      <p>Send email to this <a href="mailto:bomec970@gmail.com">address</a></p>
+
+      <p id="Links"><strong><ins>USING A BUTTON AS A LINK</ins></strong></p>
+      <p>To use a button as a link, use the following (it includes some elements of javascript): button tag onclick= “document.location=link to be opened” The text to appear on the button (close button tag)</p>
+      <button onclick="document.location=https://www.w3schools.com/html/html_links.asp" style="background-color:darkred;color:antiquewhite;padding:9px;border:none;text-align:center;">HTML Tutorial</button>
+
+      <hr size="3" noshade>
+      <h1 style="text-align:center;"><ins>Styling a link or several links</ins></h1>
+      <p>We can use the <strong>STYLE</strong> tag in the title section to design the way all the links will appear and behave. Links have several styles:</p>
+      <p>Use the a: link {color, background color, text-decoration} to design an <strong>unvisited link</strong></p>
+      <p>Use the a: visited {color, background color, text-decoration} to design a <strong>visited link</strong></p>
+      <p>Use the a: hover {color, background color, text-decoration} to design how the link behaves when the mouse is <strong>hovered above it</strong></p>
+      <p style="text-align:center"><strong><ins>ADDITIONAL STYLING</ins></strong></p>
+      <p>We can add some <strong>background-color, padding, text-align, text-decoration, display</strong> to the links to make them more interactive and beautiful</p>
+
+      <h2 style="text-align:center"><ins>Creating a bookmark</ins></h2>
+      <p>The idea of a bookmark simply means that if we click on it, it will take us to a particular page on our website. The first step is to attach an <strong>id</strong> to the destination heading:</p>
+      <p>Then, we will create a link at the top of our page, which will have the ID of the destination heading. For example:</p>
+
+      <h1 id="bookmark">This is the bookmark heading</h1>
+      <p>Now, we will create a link at the beginning of our web page that will bring us straight to the bookmark heading. The link must be created using the <strong># tag</strong></p>
+
+      <hr size="3" noshade>
+      <h1 id="Image maps"><ins>HTML image maps</ins></h1>
+      <center><img src="https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" width="850" height="650" alt="workstation table" usemap="#workmap"></center>
+      <map name="workmap">
+        <area shape="poly" coords="504,91,475,310,379,461,699,588,771,413,819,163" alt="a computer" href="https://edu.gcfglobal.org/en/computerbasics/what-is-a-computer/1/" title="computer" target="_blank">
+        <area shape="circle" coords="379,214,57" alt="cup of coffee" href="https://www.pexels.com/search/cup%20of%20coffee/" title="cup of coffee" target="_blank">
+        <area shape="poly" coords="259,280,180,378,328,427,402,329" href="https://www.pexels.com/search/tablet/" title="tablet" target="_blank">
+      </map>
+      <h2 style="text-align:center"><ins>OTHER EXAMPLES</ins></h2>
+      <center><img src="https://images.pexels.com/photos/6478816/pexels-photo-6478816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" title="Valentines Love" alt="Valentines" usemap="#Love" width="500" height="700"></center>
+      <map name="Love">
+        <area shape="poly" coords="73,17,13,63,21,99,233,167,236,204,274,164,281,75" alt="love" title="my pimpim" target="_blank"
+          href="https://scontent.fabv3-2.fna.fbcdn.net/v/t1.6435-9/p720x720/150177860_1166771800442733_4559060782382480398_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=e3f864&_nc_ohc=JmVbdggLAswAX86luag&_nc_ht=scontent.fabv3-2.fna&tp=6&oh=c7599e3d31518d2a1d49b1ec514f2f16&oe=609634B9">
+        <area shape="poly" coords="1,97,228,170,227,252,177,310,137,299,134,282,1,233" alt="love" title="Your smile brightens my world" target="_blank"
+          href="https://images.pexels.com/photos/5331262/pexels-photo-5331262.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+        <area shape="poly" coords="1,237,132,281,139,345,14,490,2,409" alt="love" target="_blank" title="Melody of love" href="https://images.pexels.com/photos/5332423/pexels-photo-5332423.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+        <area shape="poly" coords="52,501,72,554,188,603,471,604,498,389,225,297" alt="love" target="_blank" title="Love is a gift" href="https://images.pexels.com/photos/5493197/pexels-photo-5493197.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+        <area shape="poly" coords="216,262,225,296,495,385,498,284,259,213" alt="love" target="_blank" title="My heart belongs to you" href="https://images.pexels.com/photos/5493194/pexels-photo-5493194.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+        <area shape="poly" coords="277,126,280,215,424,262,472,206,494,98,351,57" alt="love" target="_blank" title="I LOVE U" href="https://images.pexels.com/photos/5493239/pexels-photo-5493239.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+      </map>
+
+      <hr size="3" noshade>
+      <h1 style="text-align:center"><ins>USING BACKGROUND IMAGES</ins></h1>
+      <p style="background-image:url(C:\Users\user\Pictures\pexels-susanne-jutzeler-1108716.jpg);background-repeat:repeat;background-size:contain;color:white;">Paul Kagame (/kəˈɡɑːmeɪ/; born 23 October 1957)
+        <br>is a Rwandan politician and former military leader.
+        <br>He is the 6th and current president of Rwanda,
+        <br>having taken office in 2000.
+        <br>Kagame previously commanded the Rwandan Patriotic Front (RPF),
+        <br>a Uganda-based rebel force which invaded Rwanda in 1990
+        <br>and was one of the parties of the conflict during the
+        <br>Rwandan Civil War and the Rwandan genocide.
+        <br>He was considered Rwanda's de facto leader when he served as
+        <br>Vice President and Minister of Defence under
+        <br>President Pasteur Bizimungu from 1994 to 2000.
+        <br>Kagame was born to a Tutsi family in southern Rwanda.
+        <br>When he was two years old, the Rwandan Revolution ended centuries of
+        <br>Tutsi political dominance; his family fled to Uganda,
+        <br>where he spent the rest of his childhood.
+        <br>In the 1980s, Kagame fought in Yoweri Museveni's rebel army,
+        <br>becoming a senior Ugandan army officer after Museveni's military victories carried him to the Ugandan presidency.
+        <br>Kagame joined the RPF, taking control of the group when previous leader
+        <br>Fred Rwigyema died on the second day of the 1990 invasion.
+        <br>By 1993, the RPF controlled significant territory in Rwanda and a ceasefire was negotiated.
+        <br>The assassination of Rwandan President Juvénal Habyarimana set off the genocide,
+        <br>in which Hutu extremists killed an estimated 500,000 to 800,000 Tutsi and moderate Hutu.
+        <br> Kagame resumed the civil war, and ended the genocide with a military victory.
+      </p>
+
+      <hr size="3" noshade>
+
+
+      <h2 style="text-align:center"><ins>HTML Tables</ins></h2>
+      <p>When creating tables, it is advisable to group them under<strong>thead, tbody,</strong> and <strong>tfoot</strong>. In that way, when time comes for styling, it becomes a lot easier to style a large group of <strong>table data</strong>
+        altogether.</p>
+      <center>
+        <table style="Width:70%;text-align:center;">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nde</td>
+              <td>Laurel</td>
+              <td>26</td>
+            </tr>
+            <tr>
+              <td>Fonkou</td>
+              <td>Malvy</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>Kuate</td>
+              <td>Arnaud</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Mafowe</td>
+              <td>Ingrid</td>
+              <td>18</td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      <p>This is how to create a regular table in HTML. However, we can customize our table with different styles using the <strong>#id property</strong> as follows:</p>
+      <center>
+        <table id="t1">
+          <caption><strong><ins>Customized table</ins></strong></caption>
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th colspan="2">Lastname/Age</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nde</td>
+              <td>Laurel</td>
+              <td>26</td>
+              <td>Male</td>
+            </tr>
+            <tr style="background-color:darkred;color:white">
+              <td>Fonkou</td>
+              <td>Malvy</td>
+              <td>28</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>Kuate</td>
+              <td>Arnaud</td>
+              <td>30</td>
+              <td>Male</td>
+            </tr>
+            <tr style="background-color:darkgreen;color:white">
+              <td>Mafowe</td>
+              <td>Ingrid</td>
+              <td>18</td>
+              <td>Female</td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+      </table>
+
+      <hr size="3" noshade>
+
+      <h2 style="text-align:center;"><ins>HTML Lists</ins></h2>
+      <p>HTML lists are classified into <strong>ordered (ol)</strong> and <strong>unordered (ul)</strong> lists as follows:</p>
+      <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+      <ol>
+        <li>Sugar</li>
+        <li>Cinnamon</li>
+        <li>honey</li>
+      </ol>
+      <h2 style="text-align:center"><strong><ins>HTML Description Lists</ins></strong></h2>
+      <dl>
+        <dt>Le Kuku</dt>
+        <dd>* Premier nee</dd>
+        <dt>Malvy</dt>
+        <dd>* Deuxieme nee</dd>
+        <dt>Laurel</dt>
+        <dd>* Dernier fils</dd>
+      </dl>
+      <h2><ins><strong>More stylish lists</strong></ins></h2>
+      <p>We can edit the bullet points of our lists using the style attribute</p>
+      <ul style="list-style-type:circle;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+
+      <h2><strong><ins>List inside a list</ins></strong></h2>
+      <ul>
+        <li>Coffee</li>
+        <ul>
+          <li>Black coffee</li>
+          <li>Yellow coffee</li>
+        </ul>
+        <li>Tea</li>
+        <ol>
+          <li>black tea</li>
+          <li>green tea</li>
+        </ol>
+        <li>Milk</li>
+        <ol>
+          <li>fresh milk</li>
+          <li>almond milk</li>
+        </ol>
+      </ul>
+
+
+      <h2><strong><ins>Navigation Menu: floating list</ins></strong></h2>
+      <ul id="Navigation">
+        <li><a href="https://www.w3schools.com/">Home</a></li>
+        <li><a href="#Links">News</a></li>
+        <li><a href="#Formatting">Contact</a></li>
+        <li><a href="#Image">About</a></li>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <h2><strong><ins>Style for Ordered Lists</ins></strong></h2>
+      <ol type="A">
+        <li>somalia</li>
+        <li>Guinea</li>
+        <li>Egypt</li>
+        <li>Tunisia</li>
+        <li>Ethiopia</li>
+        <li>ALgeria</li>
+        <li>Namibia</li>
+        <li>Cameroon</li>
+        <li>Congo</li>
+      </ol>
+      <ol type="I">
+        <li>somalia</li>
+        <li>Guinea</li>
+        <li>Egypt</li>
+        <li>Tunisia</li>
+        <li>Ethiopia</li>
+        <li>ALgeria</li>
+        <li>Namibia</li>
+        <li>Cameroon</li>
+        <li>Congo</li>
+      </ol>
+      <h2><strong><ins>Control list counting</ins></strong></h2>
+      <ol type="1" start="20">
+        <li>somalia</li>
+        <li>Guinea</li>
+        <li>Egypt</li>
+        <li>Tunisia</li>
+        <li>Ethiopia</li>
+        <li>ALgeria</li>
+        <li>Namibia</li>
+        <li>Cameroon</li>
+        <li>Congo</li>
+        <li>Mali</li>
+      </ol>
+
+
+      <hr size="2" noshade>
+
+
+      <h1 style="text-align:center"><ins>The DIV and SPAN elements</ins></h1>
+      <h2><strong><ins>The Div element</ins></strong></h2>
+      <p>The div element serves as a container for other elements.
+        <br>If for example we want to style both the heading and a paragraph,
+        <br>we put all of them in div tags and can style them all together. For example:
+      </p>
+      <div style="background-color:#333333;color:antiquewhite;padding:40px;margin:30px;text-align:center">
+        <h2><ins>Paul Kagame</ins></h2>
+        <p>Paul Kagame (/kəˈɡɑːmeɪ/; born 23 October 1957)
+          <br>is a Rwandan politician and former military leader.
+          <br>He is the 6th and current president of Rwanda,
+          <br>having taken office in 2000.
+          <br>Kagame previously commanded the Rwandan Patriotic Front (RPF),
+          <br>a Uganda-based rebel force which invaded Rwanda in 1990
+          <br>and was one of the parties of the conflict during the
+          <br>Rwandan Civil War and the Rwandan genocide.
+          <br>He was considered Rwanda's de facto leader when he served as
+          <br>Vice President and Minister of Defence under
+          <br>President Pasteur Bizimungu from 1994 to 2000.
+        </p>
+      </div>
+      <h2><strong><ins>The SPAN Element</ins></strong></h2>
+      <p>The span element is an inline container used to mark up a part of a text, or a part of a document. For example:
+      </p>
+      <p>My mother likes wearing <strong><ins><span style="color:blue">blue</span></ins></strong> dresses for occasions, whereas my dad sticks to the traditional <strong><span
+            style="background-color:darkred;color:antiquewhite;text-decoration:underline;">black</span></strong> suit which maintains class.</p>
+
+      <hr size="3" noshade>
+
+      <h1 style="text-align:center"><ins>HTML frames (Iframe)</ins></h1>
+      <p>HTML frames are used to embed a document into another document using the <strong>iframe</strong> tag. We will need to adjust the <strong>width, height, target</strong>, and also add a <strong>title</strong>.</p>
+      <center><iframe src="https://www.aun.edu.ng/" height="400" width="400" title="Iframe Example"></iframe>
+      </center>
+      <p>It is also possible to make a link open into an iframe, by adding a <strong>name attribute</strong> in the iframe code, then adding a <strong>target attribute</strong> having the same name as that of the name attribute, in the link's code.
+      </p>
+      <iframe src="https://www.pexels.com/" height="400" width="400" title="Pexels" name="Pictures"></iframe>
+      <p><a href="https://www.aun.edu.ng" target="Pictures">AUN link</a></p>
+      <iframe src="https://stocksnap.io/" height="400" width="500" name="Unsplash"></iframe>
+      <p><a href="https://unsplash.com/" target="Unsplash">Unsplash</a></p>
+      <p>From this example, we have an iframe containing pexels website. And we have a link of AUN website. When we click the AUN link, it opens the AUN website in the Iframe.</p>
+
+      <hr size="3" noshade>
+
+      <h2 style="text-align:center"><strong><ins>Header, Article and Footer</ins></strong></h2>
+      <p>There are other elements, apart from the DIV element, who can serve as container for other elements. These are: <strong>headers, footers, articles, sections, Nav (for lists).</strong></p>
+      <header>
+        <h2>French Countries</h2>
+      </header>
+      <section>
+        <nav>
+          <ul id="list">
+            <li>Cameroon</li>
+            <li>Cote D'ivoire</li>
+            <li>Gabon</li>
+            <li>Mali</li>
+          </ul>
+        </nav>
+        <article>
+          <h2><strong>Cameroon</strong></h2>
+          <p>Cameroon is a french country with Yaounde as political capital.
+            <br>It is one of the five countries under the CEMAC region.
+            <br>It has 2 official languages which are French and English.
+            <br>It is one of the only 2 bilingual countries in the world.
+          </p>
+          <p>The president of Cameroon is called Paul Biya, and he has been on power for 39 years now.
+            <br>Cameroon is a French colony and had its independence in 1960.
+            <br>It was at that time it was split into the anglophone and francophone.
+          </p>
+        </article>
+      </section>
+      <footer>
+        <p>Written by: Laurel</p>
+      </footer>
+
+      <hr size="3" noshade>
+
+      <h1 style="text-align: center;"><ins>HTML FORMS</ins></h1>
+      <p>HTML forms are composed of <strong>inputs</strong> and <strong>labels</strong>.
+        <br>The inputs have different types and we'll explore as much of them as we can.
+      </p>
+
+      <h3 style="text-align: center;"><strong><ins>The text, and submit button</ins></strong></h3>
+
+      <form class="" action="index.html" method="post">
+        <label for="Name">First Name:</label><br>
+        <input type="text" name="FName" value="" placeholder="example: John">
+        <input type="button" name="button" value="submit"><br>
+
+        <label for="Name">Last name:</label><br>
+        <input type="text" name="Lname" value="" placeholder="example: Paul">
+        <input type="submit" name="button" value="submit"><br>
+
+        <label for="Date">Date of birth:</label><br>
+        <input type="date" name="Date" value="">
+      </form>
+
+      <h3 style="text-align: center;"><strong><ins>Radio Buttons</ins></strong></h3>
+      <form class="" action="index.html" method="post">
+        <label for="gender">Gender:</label><br>
+
+        <input type="radio" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" name="gender" value="other">
+        <label for="other">Other</label>
+      </form>
+      <h3 style="text-align: center;"><strong><ins>For checkboxes and button</ins></strong></h3>
+      <form class="" action="index.html" method="post">
+        <label for="Question">Which of the following continents have you been to?</label><br>
+        <input type="checkbox" name="continent" value="africa">
+        <label for="africa">Africa</label><br>
+
+        <input type="checkbox" name="continent" value="europe">
+        <label for="europe">Europe</label><br>
+
+        <input type="checkbox" name="continent" value="asia">
+        <label for="asia">Asia</label><br>
+
+        <input type="checkbox" name="continent" value="australia">
+        <label for="australia">Australia</label><br>
+
+        <input type="checkbox" name="continent" value="n.america">
+        <label for="n.america">North America</label><br>
+
+        <input type="checkbox" name="continent" value="s.america">
+        <label for="s.america">South America</label><br>
+        <input type="button" name="skip" value="Skip"><br>
+      </form>
+
+      <h3 style="text-align: center;"><strong><ins>For color picker</ins></strong></h3>
+      <form class="" action="index.html" method="post">
+        <label for="color">What is your favorite color?</label>
+        <input type="color" name="color" value="color">
+        <input type="submit" name="" value="submit">
+      </form>
+
+      <h3 style="text-align: center;"><strong><ins>For Email and Passwords</ins></strong></h3>
+      <form class="" action="index.html" method="post">
+        <label for="email">Email address:</label><br>
+        <input type="email" name="email" value="" placeholder="example@xyz.com"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" value="">
+        <input type="button" name="" value="submit">
+      </form>
+      </form>
+
+      <h3 style="text-align: center;"><strong><ins>For Files</ins></strong></h3>
+      <form class="" action="index.html" method="post">
+        <label for="myfile">Submit CV here:</label>
+        <input type="file" name="myfile">
+      </form>
+
+      <h3 style="text-align: center;"><strong><ins>For numbers and telephone numbers (with max, min and step attributes)</ins></strong></h3>
+      <p>The <strong>step attribute</strong> is used to automatically skip numbers by a certain amount. See example below with <strong>step="10"</strong></p>
+      <form class="" action="index.html" method="post">
+        <label for="quantity">Age (between 18 and 50)</label>
+        <input type="number" name="quantity" min="18" max="50" step="10">
+        <input type="submit" name="submit" value="submit"><br>
+      </form>
+      <form class="" action="index.html" method="post">
+        <label for="phone">Telephone number:</label>
+        <input type="tel" name="phone" placeholder="0-000-000-0000">
+        <input type="submit" name="" value="submit">
+        <input type="button" name="skip" value="skip">
+      </form>
+      <h3 style="text-align: center;"><strong><ins>For dropdown list (select attribute)</ins></strong></h3>
+      <ul style="list-style-type: circle;">
+        <li>Unlike other forms, <strong>the select form</strong> doesn't use the <strong>input attribute.</strong><br> It uses the <strong>option attribute</strong> instead for each of its element in the list.</li>
+        <li>You can also select a <strong>pre-selected option</strong> to be displayed by default in the text area of the dropdown menu by using the <strong>selected attribute</strong> in the <strong>option element</strong> you want to appear first.
+        </li>
+        <li>To allow <strong>multiple selections</strong> use the <strong>multiple</strong> attribute in the <strong>select tag.</strong></li>
+      </ul>
+      <form class="" action="index.html" method="post">
+        <label for="state">Select state of origin:</label>
+        <select class="" name="state">
+          <option value="Adamawa">Adamawa</option>
+          <option value="Taraba">Taraba</option>
+          <option value="Plateau">Plateau</option>
+          <option value="Lagos" selected>Lagos</option>
+          <option value="Nasarawa">Nasarawa</option>
+          <option value="Abia">Abia</option>
+          <option value="Benue">Benue</option>
+          <option value="Borno">Borno</option>
+          <option value="Kaduna">Kaduna</option>
+          <option value="Gombe">Gombe</option>
+          <input type="button" name="" value="submit">
+        </select>
+      </form>
+      <h3 style="text-align: center;"><strong><ins>For Text-area</ins></strong></h3>
+      <p>Used to create large text-areas. It doesn't require the use of the <ins><strong>input tag.</strong></ins></p>
+      <form class="" action="index.html" method="post">
+        <textarea name="about you" rows="10" cols="40" placeholder="Tell us more about you"></textarea>
+        <br><input type="button" name="" value="submit">
+      </form>
+
+      <h3 style=";text-align:center;"><strong><ins>Group data (fieldset and legend)</ins></strong></h3>
+      <p>The <strong>fieldset tag</strong> acts like the <strong>Div element</strong>, by grouping data inside one box.</p>
+      <p>It is followed by a <strong>legend tag</strong> gives a name to our box of data. The <strong>input and label tags</strong> will appear after the <strong>legend tag.</strong></p>
+      <form class="" action="index.html" method="post">
+        <fieldset>
+          <legend>Personal info:</legend>
+          <label for="FName">Firstname:</label><br>
+          <input type="text" name="FName" value=""><br>
+
+          <label for="Lname">Lastname:</label><br>
+          <input type="text" name="Lname" value=""><br>
+          <input type="button" name="submit" value="submit">
+        </fieldset>
+      </form>
+      <h2 style="text-align: center;"><strong><ins>Range</ins></strong></h2>
+      <form class="" action="index.html" method="get">
+        <label for="volume">Age (between 0 and 70):</label>
+        <input type="range" name="volume" min="0" max="70">
+        <input type="button" value="submit">
+      </form>
+      <h2 style="text-align: center;"><strong><ins>Time</ins></strong></h2>
+      <form class="" action="index.html" method="post">
+        <label for="time">Select Time:</label>
+        <input type="time" name="time">
+        <input type="button" name="" value="submit">
+      </form>
+      <h2 style="text-align: center;"><strong><ins>Datalists</ins></strong></h2>
+      <form class="" action="index.html" method="post">
+        <input list="province">
+        <datalist id="province">
+          <option value="douala"></option>
+          <option value="yaounde"></option>
+          <option value="buea"></option>
+          <option value="ebolowa"></option>
+        </datalist>
+      </form>
+      <h2 style="text-align: center;"><strong><ins>HTML Input attributes</ins></strong></h2>
+      <p><strong><ins>The readonly attribute</ins></strong></p>
+      <p>It means the text can't be modified or changed</p>
+      <form class="" action="index.html" method="post">
+        <label for="Name">First Name:</label><br>
+        <input type="text" name="FName" value="Charles" readonly>
+        <input type="submit" name="button" value="submit"><br>
+
+        <label for="Name">Last name:</label><br>
+        <input type="text" name="Lname" value="Taylor" readonly>
+        <input type="submit" name="button" value="submit"><br>
+      </form>
+
+      <p><strong><ins>The disabled attribute</ins></strong></p>
+      <p>This attribute automatically disables the cell and makes it unusable and unclickable.</p>
+      <form class="" action="index.html" method="post">
+        <label for="Name">First Name:</label><br>
+        <input type="text" name="FName" value="Charles" disabled>
+        <input type="submit" name="button" value="submit" disabled><br>
+
+        <label for="Name">Last name:</label><br>
+        <input type="text" name="Lname" value="Taylor" disabled>
+        <input type="submit" name="button" value="submit" disabled><br>
+      </form>
+
+      <p><strong><ins>The size attribute</ins></strong></p>
+      <p>The size attribute is used the modify the width of the input.<br>
+        It cab be used with the following inputs: text, search, tel, url, email, and password.
+        The default size is 20.<br></p>
+      <form class="" action="index.html" method="post">
+        <label for="Name">First Name:</label><br>
+        <input type="text" name="FName" value="Charles" size="50">
+        <input type="submit" name="button" value="submit"><br>
+
+        <label for="Name">Last name:</label><br>
+        <input type="text" name="Lname" value="Taylor" size="30">
+        <input type="submit" name="button" value="submit"><br>
+      </form>
+      <p><strong><ins>The maxlength attribute</ins></strong></p>
+      <p>Used to set the maximum number of characters allowed. You won't be able to type more than the set amount of characters.</p>
+      <form class="" action="index.html" method="post">
+        <label for="pin">PIN:</label>
+        <input type="text" name="" value="" maxlength="4" size="4"><br>
+        <label for="password">Password:</label>
+        <input type="password" name="" value="" maxlength="4" size="5">
+      </form>
+
+      <p><strong><ins>The multiple attribute</ins></strong></p>
+      <p>It means you can choose more than one file or value. Works only the following input types: email and files.</p>
+      <form class="" action="index.html" method="post">
+        <label for="file">Select multiple files</label>
+        <input type="file" name="files" value="" multiple>
+      </form>
+
+      <p><strong><ins>The required attribute and autofocus</ins></strong></p>
+      <p>It specifies that an input field must be filled before being submitted. Autofocus automatically puts the cursor in the text field specified.</p>
+      <form class="" action="index.html" method="post">
+        <label for="Name">First Name:</label><br>
+        <input type="text" name="FName" value="" required>
+        <input type="submit" name="button" value="submit"><br>
+
+        <label for="Name">Last name:</label><br>
+        <input type="text" name="Lname" value="" required>
+        <input type="submit" name="button" value="submit"><br>
+      </form>
+
+      <p><strong><ins>The autocomplete attribute</ins></strong></p>
+      <p>It predict what you want to write in the text field.</p>
+      <form class="" action="index.html" method="post">
+        <label for="Name">First Name:</label><br>
+        <input type="text" name="FName" value="" autocomplete="on">
+        <input type="submit" name="button" value="submit"><br>
+
+        <label for="Name">Last name:</label><br>
+        <input type="text" name="Lname" value="" autocomplete="on">
+        <input type="submit" name="button" value="submit"><br>
+      </form>
+
+      <h2 style="text-align: center;"><strong><ins>Form attributes</ins></strong></h2>
+      <p><strong><ins>The form attribute</ins></strong></p>
+      <p>It is possible to put an input out of a form, but still make it act like its inside the form using <strong>id tag</strong> and <strong>form tag</strong>. See example:</p>
+      <form class="" action="index.html" method="post" id="form1">
+        <label for="Name">First Name:</label><br>
+        <input type="text" name="FName" value="">
+        <input type="submit" name="button" value="submit"><br>
+      </form>
+      <label for="Name">Last name:</label><br>
+      <input type="text" name="Lname" value="" form="form1" id="Name">
+      <input type="submit" name="button" value="submit"><br>
+
+      <p><strong><ins>Formtarget</ins></strong></p>
+      <p>The <strong>formtarget</strong> attribute specifies where the form will be submitted. It overrides the target of the original form element</p>
+      <form class="" action="index.html" method="post">
+        <label for="Name">Last name:</label><br>
+        <input type="text" name="Lname" value="Taylor">
+        <input type="submit" name="button" value="submit" formtarget="_blank"><br>
+      </form>
+
+      <hr size="3" noshade>
+
+      <h2 style="text-align: center;"><strong><ins>Keyboard input</ins></strong></h2>
+      <p>To define a text as keyboard input using the <strong><ins>kbd tag</ins></strong>. For example: Ctrl + S</p>
+      <p><strong><ins>Example</ins></strong></p>
+      <p>Save the document by pressing</p>
+      <kbd>Ctrl + S</kbd>
+
+      <h2 style="text-align: center;"><strong><ins>Computer code</ins></strong></h2>
+      <p>To define a text as a computer code use the <strong><ins>code tag.</ins></strong></p>
+      <p><strong><ins>Example</ins></strong></p>
+      <code>
+        <pre>
+        x = 5;
+        y = 6;
+        z = x + y;
+      </pre>
+      </code>
+
+      <h2 style="text-align: center;"><strong><ins>Variables</ins></strong></h2>
+      <p>Use the <strong><ins>var tag</ins></strong> to define txts as variables.</p>
+      <p><strong><ins>Example:</ins></strong></p>
+      <p>The formula for the area of a triangle is: 1/2 x <var>b</var> x <var>h</var>,<br>
+        where <var>b</var> is the base,<br>
+        and <var>h</var> is the height.</p>
+
+      <h2 style="text-align: center;"><strong><ins>Html semantics and symbols</ins></strong></h2>
+      <p>Check the W3schools site to learn aout semantics and symbols.<br>
+        For exanmple it will show you the codes to use to add currency signs (euro, yen, pounds), <br>
+        greater than and less than signs, les accents aigue et accent grave, alpha, beta, gamma signs, etc. </p>
+
+      <hr size="3" noshade>
+
+      <h2 style="text-align: center;"><strong><ins>Multimedia (video/audio)</ins></strong></h2>
+      <p>Use the <strong><ins>video tag</ins></strong> to input a video. The attributes that can be used with the <strong>video tags</strong> are:</p>
+      <ul style="list-style-type: square;">
+        <li><strong>The autoplay attribute:</strong> It automatically plays the video.</li>
+        <li><strong>The muted attribute:</strong> Add the muted attribute after the autoplay attribute to start the video muted.</li>
+        <li><strong>The controls attribute:</strong> It adds control buttons to the video (play, pause, previous, next)</li>
+      </ul>
+      <p>Use the <strong><ins>audio tag</ins></strong> to input an audio. The additional attrbutes which can be added are the same as that of the video.</p>
+      <center><video src="C:\Users\user\Downloads\the weekend blinding lights.mp4" width="800" height="600" controls autoplay muted></video></center>
+      <audio src="C:\Users\user\Music\Audio\Daïcko - Pirate Validé (OfficialMusic Video) by Narcis Le Riminel.mp3" controls></audio>
+
+      <h2 style="text-align: center;"><strong><ins>Plugins</ins></strong></h2>
+      <p>Use the <strong>object tag</strong> to embed plugins such as <strong>PDF, pictures and other things.</strong></p>
+      <object type="" data="C:\Users\bomec\OneDrive\Documents\Comfort Hudson CV.pdf" width="500" height="500"></object>
+      <caption>The <strong><ins>object tag</ins></strong> can be used to open a PDF</caption>
+
+      <p><object type="" data="C:\Users\bomec\OneDrive\Images\Pellicule\pexels-berendeyivanov-andreykobysnyn-2756113.jpg" width="500" height="400"></object></p>
+      <caption>The object tag can also be used for pictures</caption>
+
+      <caption>The object tag can also be used for videos, but you can't add the autoplay and muted attributes.</caption>
+      <center><p><object type="" data="C:\Users\bomec\OneDrive\Documents\Programming\Personal site\CSS.html" width="500" height="400"style="border: 4px double darkred;"></object></p>
+      <caption>The object tag can also be used to put a HTML in another HTML.</caption></center>
+
+      <h2><strong>The embed plugin</strong></h2>
+      <e type="" src="C:\Users\user\Documents\graphic design\photoshop\design pics (pexels.com)\pexels-cottonbro-4045546.jpg" width="200" height="300">
+
+        <h2 style="text-align: center;"><strong>Embedding a youtube video in HTML</strong></h2>
+        <p>To embed a youtube video to HTML, use the Iframe tag instead of the video tag, then follow these steps;</p>
+        <ol>
+          <li>Copy the <strong>video's URL</strong></li>
+          <li>Use the URL as the source</li>
+          <li>Modify the URL by changing the "watch" to "embed"</li>
+          <li>Autoplay and mute elements are added in the URL. At the end of the URL simply add a question mark <strong>"?"</strong>, then add<strong>autoplay=1</strong> and <strong> & mute=1</strong>.</li>
+          <li>To add controls, simply add <strong>controls=1</strong>. To remove controls, add <strong>controls=0</strong> to the URL</li>
+          <li>In order for the video to play on repeat, add <strong>loop=1</strong></li>
+        </ol>
+        <p><iframe src="https://www.youtube.com/embed/63gtUb37OlM?autoplay=1&mute=1&loop=1&controls=1" width="500" height="500"></iframe></p>
+
+        </html>
